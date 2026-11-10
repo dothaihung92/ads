@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phân tích Google Ads</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;max-width:720px;margin:2rem auto;padding:0 16px;color:#1a1a1a}
+label{display:block;margin-top:1rem;font-weight:600} input,textarea,select{width:100%;padding:.5rem;margin-top:.25rem;box-sizing:border-box}
+button{margin-top:1.5rem;padding:.7rem 1.4rem;font-size:1rem;cursor:pointer}
+.err{background:#fde8e8;border:1px solid #e09a9a;padding:.75rem;border-radius:6px}
+.note{color:#555;font-size:.9rem}
+</style></head><body>
+<h1>Phân tích Google Ads bằng AI</h1>
+<p class="note">Dữ liệu trong file sẽ được gửi tới Anthropic (Claude) để phân tích. Đừng tải lên dữ liệu bạn không được phép chia sẻ.</p>
+{% if error %}<p class="err">{{ error }}</p>{% endif %}
+<form method="post" action="/analyze" enctype="multipart/form-data" id="f">
+<label>File CSV export từ Google Ads (có thể chọn nhiều file)
+<input type="file" name="files" accept=".csv,.tsv,.txt" multiple required></label>
+<label>Ngành / sản phẩm <input name="business" placeholder="VD: Bán giày online"></label>
+<label>Mục tiêu <input name="goal" placeholder="VD: Tăng đơn hàng, CPA dưới 150.000đ"></label>
+<label>CPA / ROAS mục tiêu <input name="target"></label>
+<label>Đơn vị tiền tệ <input name="currency" placeholder="VD: VND"></label>
+<label>Khoảng thời gian của dữ liệu <input name="period" placeholder="VD: 01/10 - 30/10/2026"></label>
+<label>Ghi chú thêm <textarea name="notes" rows="3"></textarea></label>
+<button id="b">Phân tích</button>
+</form>
+<script>document.getElementById('f').addEventListener('submit',()=>{const b=document.getElementById('b');b.disabled=true;b.textContent='Đang phân tích, có thể mất vài phút...';});</script>
+</body></html>

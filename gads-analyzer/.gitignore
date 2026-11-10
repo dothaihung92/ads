@@ -1,0 +1,6 @@
+.env
+google-ads.yaml
+data/
+__pycache__/
+.venv/
+*.pyc

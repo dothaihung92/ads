@@ -1,0 +1,6 @@
+flask>=3.0
+anthropic>=1.0
+markdown>=3.5
+# Chỉ cần khi lấy dữ liệu trực tiếp bằng Google Ads API (cần Developer Token):
+# google-ads>=25.0
+pytest>=8.0
