@@ -69,8 +69,8 @@ def parse_number(value: str) -> float | None:
     elif "," in v:
         # 1,200 / 1,234,567 là hàng nghìn; 0,00 / 11,11 là số thập phân kiểu Việt Nam.
         v = v.replace(",", "") if re.fullmatch(r"\d{1,3}(,\d{3})+", v) else v.replace(",", ".")
-    elif v.count(".") > 1:
-        v = v.replace(".", "")  # 1.500.000
+    elif v.count(".") > 1 or re.fullmatch(r"\d{1,3}\.\d{3}", v):
+        v = v.replace(".", "")  # 1.500.000 hoặc 1.442 (dấu chấm hàng nghìn kiểu Việt Nam)
     try:
         return float(v)
     except ValueError:
@@ -99,8 +99,8 @@ def parse_report(raw: bytes, name: str = "report") -> Table:
     for r in rows[header_idx + 1:]:
         if not any(c.strip() for c in r):
             continue
-        if r[0].strip().lower().startswith(("total", "tổng")):
-            continue  # dòng tổng của Google Ads
+        if any(c.strip().lower().startswith(("total", "tổng")) or "tổng số" in c.lower() for c in r[:3]):
+            continue  # dòng tổng/tổng phụ của Google Ads (tránh cộng trùng)
         data.append({columns[i]: (r[i].strip() if i < len(r) else "") for i in range(len(columns))})
     return Table(name=name, columns=columns, rows=data, total_rows=len(data), notes=notes)
 

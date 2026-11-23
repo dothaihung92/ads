@@ -78,3 +78,14 @@ def test_vietnamese_numbers_and_columns():
             {"Từ khóa": "b", "Chi phí tr.bình": "7", "Chi phí": "20", "Lượt nhấp": "2"}]
     tot = analyzer.totals(analyzer.Table("t", cols, rows, 2))
     assert tot == {"Chi phí": 30.0, "Lượt nhấp": 3.0}
+
+
+def test_vn_thousands_and_subtotals():
+    assert analyzer.parse_number("1.442") == 1442.0
+    assert analyzer.parse_number("12.101") == 12101.0
+    raw = ("Báo cáo\nkhoảng\nDanh mục,Danh mục phụ,Cụm từ tìm kiếm,Hiển thị,Lượt nhấp\n"
+           'a,Danh mục phụ – Tổng số, --,"1.442",10\n'
+           'a,x,q1,"1.000",6\n'
+           'a,x,q2,442,4\n').encode()
+    tb = analyzer.parse_report(raw, "s")
+    assert len(tb.rows) == 2 and analyzer.totals(tb) == {"Hiển thị": 1442.0, "Lượt nhấp": 10.0}
