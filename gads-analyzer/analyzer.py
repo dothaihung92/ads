@@ -51,16 +51,26 @@ def decode_bytes(raw: bytes) -> str:
     return raw.decode("utf-8-sig", errors="replace")
 
 
+_NUM = re.compile(r"^-?\d[\d.,]*$")
+AVG_MARKERS = ("tr.bình", "avg", "/", "%", "tỷ lệ", "rate", "ctr", "cpc", "điểm", "score")
+
+
 def parse_number(value: str) -> float | None:
-    """'1,234.56' -> 1234.56; '12.5%' -> 12.5; ' --' -> None."""
-    v = value.strip().replace(" ", "")
-    if v in ("", "--", "-", "n/a"):
+    """Đọc số theo cả kiểu en-US ('1,234.56') lẫn Việt Nam ('1.234,56', '11,11%').
+
+    Chỉ nhận chuỗi là một con số thuần (có thể kèm %), nên '5.Thuê kế toán' -> None.
+    """
+    v = value.strip().replace("\u00a0", "").rstrip("%").strip()
+    if not _NUM.match(v):
         return None
-    v = re.sub(r"[^\d.,\-]", "", v)
-    if not v or v in ("-", ".", ","):
-        return None
-    # Chuẩn Google Ads (en-US): dấu phẩy là phân cách hàng nghìn.
-    v = v.replace(",", "")
+    if "," in v and "." in v:
+        dec = "," if v.rfind(",") > v.rfind(".") else "."
+        v = v.replace("." if dec == "," else ",", "").replace(dec, ".")
+    elif "," in v:
+        # 1,200 / 1,234,567 là hàng nghìn; 0,00 / 11,11 là số thập phân kiểu Việt Nam.
+        v = v.replace(",", "") if re.fullmatch(r"\d{1,3}(,\d{3})+", v) else v.replace(",", ".")
+    elif v.count(".") > 1:
+        v = v.replace(".", "")  # 1.500.000
     try:
         return float(v)
     except ValueError:
@@ -96,8 +106,12 @@ def parse_report(raw: bytes, name: str = "report") -> Table:
 
 
 def cost_column(columns: list[str]) -> str | None:
-    for c in columns:
-        if any(c.strip().lower().startswith(n) for n in COST_NAMES):
+    low = {c: c.strip().lower() for c in columns}
+    for c, l in low.items():  # ưu tiên cột đúng tên 'Chi phí' / 'Cost'
+        if l in COST_NAMES:
+            return c
+    for c, l in low.items():
+        if l.startswith(COST_NAMES) and not any(m in l for m in AVG_MARKERS):
             return c
     return None
 
@@ -121,7 +135,9 @@ def totals(table: Table) -> dict[str, float]:
     for c in table.columns:
         vals = [parse_number(r.get(c, "")) for r in table.rows]
         nums = [v for v in vals if v is not None]
-        if nums and len(nums) >= 0.8 * len(table.rows) and "%" not in c and "avg" not in c.lower() and "tb" not in c.lower():
+        if any(m in c.lower() for m in AVG_MARKERS):
+            continue  # trung bình/tỷ lệ không cộng dồn được
+        if nums and len(nums) >= 0.8 * len(table.rows):
             out[c] = round(sum(nums), 2)
     return out
 

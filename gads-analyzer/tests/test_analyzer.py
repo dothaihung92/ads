@@ -64,3 +64,17 @@ def test_analyze_with_fake_client():
     assert out["text"] == "## OK"
     sent = fake.beta.messages.kw
     assert sent["model"] == "claude-opus-5-5" and "<data>" in sent["messages"][0]["content"]
+
+
+def test_vietnamese_numbers_and_columns():
+    assert analyzer.parse_number("11,11%") == 11.11
+    assert analyzer.parse_number("4,00") == 4.0
+    assert analyzer.parse_number("1.500.000") == 1500000.0
+    assert analyzer.parse_number("1.234,56") == 1234.56
+    assert analyzer.parse_number("5.Thuê kế toán ngoài giờ") is None
+    cols = ["Từ khóa", "Chi phí tr.bình", "Chi phí", "Lượt nhấp"]
+    assert analyzer.cost_column(cols) == "Chi phí"
+    rows = [{"Từ khóa": "a", "Chi phí tr.bình": "5", "Chi phí": "10", "Lượt nhấp": "1"},
+            {"Từ khóa": "b", "Chi phí tr.bình": "7", "Chi phí": "20", "Lượt nhấp": "2"}]
+    tot = analyzer.totals(analyzer.Table("t", cols, rows, 2))
+    assert tot == {"Chi phí": 30.0, "Lượt nhấp": 3.0}
