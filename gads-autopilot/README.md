@@ -1,45 +1,57 @@
-# Google Ads Autopilot: AI đề xuất, bạn duyệt, script mới áp dụng
+# Google Ads Autopilot: nâng Điểm Chất lượng, giảm CPC (AI đề xuất, bạn duyệt)
 
 Một Google Ads Script chạy ngay trong tài khoản của bạn. **Không cần Developer Token.**
+Mục tiêu: nâng Điểm Chất lượng (ĐCL) để giảm CPC thực tế mà vẫn giữ vị trí hiển thị.
 
 ## Cách hoạt động
-1. **Cảnh báo:** nếu hôm qua hoặc hôm nay (tới giờ chạy) quảng cáo 0 lượt hiển thị, script gửi email.
-2. **Phân tích (mặc định thứ Hai):** gửi dữ liệu 30 ngày cho Claude. Claude trả về danh sách ĐỀ XUẤT, script ghi vào Google Sheet (tab `Đề xuất`).
-3. **Bạn duyệt:** ở cột `DUYỆT?` chọn `Duyệt` hoặc `Từ chối`.
-4. **Áp dụng:** lần chạy sau, script chỉ làm những dòng bạn đã chọn `Duyệt`, rồi ghi kết quả vào Sheet và tab `Nhật ký`.
+1. **Phân tích (mặc định thứ Hai):** script lấy dữ liệu 30 ngày (chiến dịch, từ khóa kèm 3 thành phần ĐCL, quảng cáo, cụm từ tìm kiếm, từ phủ định) và gửi cho Claude.
+2. **Đề xuất:** Claude chẩn đoán thành phần ĐCL nào yếu (tỷ lệ nhấp dự kiến, liên quan của quảng cáo, trang đích) rồi ghi đề xuất vào Google Sheet, tab `Đề xuất`, kèm lý do và bằng chứng.
+3. **Bạn duyệt:** cột `DUYỆT?` chọn `Duyệt` hoặc `Từ chối`. Với quảng cáo mới bạn có thể sửa thẳng các dòng `H:` / `D:` trong ô nội dung.
+4. **Áp dụng:** lần chạy sau, script chỉ làm các dòng đã `Duyệt`, ghi kết quả vào Sheet và tab `Nhật ký`.
+5. **Theo dõi mục tiêu:** mỗi lần phân tích ghi một dòng vào tab `Theo dõi KPI` (ĐCL trung bình theo lượt hiển thị, % từ khóa ĐCL từ 7, số từ khóa dưới trung bình ở từng thành phần, CPC trung bình, CPA). Bạn nhìn xu hướng để biết có đạt mục tiêu không.
+6. **Cảnh báo:** nếu hôm qua hoặc hôm nay quảng cáo 0 lượt hiển thị, script gửi email.
 
-## Script có thể và không thể làm
-| Làm được (sau khi bạn duyệt) | Không bao giờ làm |
-|---|---|
-| `ADD_NEGATIVE`: thêm từ phủ định cấp chiến dịch | Đổi ngân sách, giá thầu |
-| `PAUSE_KEYWORD`: tạm dừng từ khóa (không xóa) | Bật chiến dịch, xóa bất cứ thứ gì |
-| | Sửa quảng cáo, trang đích, thanh toán |
+## Các loại thay đổi (chỉ sau khi bạn duyệt)
+| Loại | Làm gì | Giúp thành phần ĐCL nào |
+|---|---|---|
+| `ADD_NEGATIVE` | thêm từ phủ định cấp chiến dịch | tỷ lệ nhấp dự kiến |
+| `PAUSE_KEYWORD` | tạm dừng từ khóa (không xóa) | dọn từ khóa chết/trùng |
+| `ADD_KEYWORD` | thêm từ khóa EXACT/PHRASE vào nhóm có sẵn | liên quan, CTR |
+| `ADD_RSA` | thêm MỘT quảng cáo thích ứng mới vào nhóm có sẵn (không thay hay xóa quảng cáo cũ) | liên quan của quảng cáo, CTR |
+| `NOTE` | lời khuyên để bạn tự làm (sửa trang đích, tái cấu trúc nhóm, giá thầu...) | trải nghiệm trang đích |
 
-Các lời khuyên khác (trang đích, nội dung quảng cáo, chiến lược giá thầu, nghi vấn ngừng phân phối) xuất hiện dưới dạng dòng `NOTE` để bạn tự làm.
+**Script không bao giờ** đổi ngân sách, giá thầu, trang đích, thanh toán, bật chiến dịch hay xóa thứ gì. CPC giảm nhờ ĐCL cải thiện qua vài tuần, không phải nhờ script đổi giá thầu. Trang đích (thường là điểm yếu lớn nhất) phải do bạn sửa trên website, Claude chỉ nói cần sửa gì.
 
 ## Lớp bảo vệ trong code
-- `DRY_RUN = true` mặc định: chỉ mô phỏng, không sửa tài khoản.
-- Phủ định bị chặn nếu: trùng cụm từ được bảo vệ (`PROTECTED_TERMS`), sẽ chặn nhầm từ khóa đang chạy trong chiến dịch, đã tồn tại, hoặc có ký tự lạ.
-- Tạm dừng từ khóa bị chặn nếu từ khóa có chuyển đổi trong 30 ngày (kiểm tra lại ở thời điểm áp dụng).
-- Mọi đề xuất được kiểm tra hai lần: lúc Claude đề xuất và lúc áp dụng.
-- Tối đa `MAX_APPLY_PER_RUN` thay đổi mỗi lần chạy. Mọi việc được ghi vào tab `Nhật ký`.
-- Đề xuất bạn đã `Từ chối` sẽ không được đề xuất lại.
+- `DRY_RUN = true` mặc định: chỉ mô phỏng.
+- Mỗi đề xuất được kiểm tra hai lần, lúc Claude đề xuất và lúc áp dụng (kể cả khi bạn sửa nội dung trong Sheet).
+- **Quảng cáo:** tiêu đề ≤ 30 ký tự (3-15 cái), mô tả ≤ 90 ký tự (2-4 cái), không dấu `!` trong tiêu đề, không URL/email trong nội dung, không từ cấm (`BANNED_WORDS`). **Mọi con số trong quảng cáo phải có trong `BUSINESS_FACTS`**, nên Claude không bịa được số năm, giá, số khách. URL cuối chỉ được dùng URL có sẵn trong quảng cáo của chính nhóm đó.
+- **Từ phủ định:** chặn nếu trùng cụm từ bảo vệ, sẽ chặn nhầm từ khóa đang chạy, hoặc đã tồn tại.
+- **Từ khóa mới:** chặn nếu đã có trong nhóm, bị từ phủ định của chiến dịch chặn, hoặc nhóm không tồn tại. Tối đa `MAX_NEW_KEYWORDS` mỗi lần.
+- **Tạm dừng:** chặn nếu từ khóa có chuyển đổi trong 30 ngày.
+- Tối đa `MAX_APPLY_PER_RUN` thay đổi mỗi lần chạy. Đề xuất đã `Từ chối` không bị đề xuất lại. Mọi việc được ghi vào `Nhật ký`.
 
-## Cài đặt (khoảng 15 phút)
+## Cài đặt (khoảng 20 phút)
 1. Tạo một Google Sheet trống, copy URL.
-2. Tạo API key riêng tại https://console.anthropic.com. Đặt giới hạn chi tiêu cho key nếu có thể. **Không dán key vào chat.**
-3. Google Ads → **Công cụ** → **Hành động hàng loạt** → **Tập lệnh** → **+** → Tập lệnh mới. Dán toàn bộ `autopilot.js`.
-4. Điền `CONFIG`: `SPREADSHEET_URL`, `ANTHROPIC_API_KEY`, `NOTIFY_EMAIL`. Sửa `BUSINESS_CONTEXT` cho đúng doanh nghiệp.
+2. Tạo API key riêng tại https://console.anthropic.com, đặt giới hạn chi tiêu nếu có thể. **Không dán key vào chat.**
+3. Google Ads → **Công cụ** → **Hành động hàng loạt** → **Tập lệnh** → **+** → tập lệnh mới. Dán toàn bộ `autopilot.js`.
+4. Điền `CONFIG`:
+   - `SPREADSHEET_URL`, `ANTHROPIC_API_KEY`, `NOTIFY_EMAIL`.
+   - **`BUSINESS_FACTS`: sửa cho đúng sự thật về doanh nghiệp của bạn** (khu vực, dịch vụ, cách liên hệ, và chỉ những con số bạn thật sự muốn đưa vào quảng cáo). Đây là nguồn duy nhất Claude được phép dùng khi viết quảng cáo.
+   - `BUSINESS_CONTEXT`, `PROTECTED_TERMS` cho đúng ngành.
 5. Bấm **Cấp quyền** (Sheets, gọi dịch vụ bên ngoài, gửi mail).
-6. Đặt `FORCE_ANALYZE: true`, bấm **Xem trước** (Preview). Xem tab `Nhật ký` và `Đề xuất`. Nếu có lỗi truy vấn hay tên trường, gửi lại nội dung lỗi cho người hỗ trợ.
-7. Duyệt vài đề xuất, chạy lại ở chế độ Xem trước. Dòng sẽ báo `Mô phỏng OK`.
-8. Hài lòng thì đặt `DRY_RUN: false`, `FORCE_ANALYZE: false`, **Chạy** một lần, rồi **Lên lịch** hàng ngày (khoảng 10:00).
+6. Đặt `FORCE_ANALYZE: true`, bấm **Xem trước**. Đọc tab `Nhật ký`, `Đề xuất`, `Theo dõi KPI`. Lỗi truy vấn hay tên trường sẽ hiện trong nhật ký.
+7. Duyệt vài đề xuất, chạy Xem trước lần nữa. Dòng sẽ báo `Mô phỏng OK`.
+8. Hài lòng thì đặt `DRY_RUN: false`, `FORCE_ANALYZE: false`, chạy một lần, rồi **Lên lịch** hàng ngày (khoảng 10:00). Quảng cáo mới nên đặt `NEW_ADS_PAUSED: true` ở vài lần đầu nếu bạn muốn tự bật trong giao diện.
 
-## Lưu ý quan trọng
-- **Chưa được kiểm thử trên tài khoản thật.** Chỉ các hàm kiểm tra logic được test bằng Node (`node --test test/autopilot.test.js`). Các truy vấn GAQL, tên trường và lệnh áp dụng chưa chạy thử. Xem trước kỹ trước khi tắt `DRY_RUN`.
-- Chế độ Xem trước của Google Ads không áp dụng thay đổi vào tài khoản, nhưng có thể vẫn ghi vào Sheet, gửi email và gọi API Claude (có tính phí).
-- API key nằm trong mã script, người có quyền xem script trong tài khoản đều thấy. Dùng key riêng, có giới hạn chi tiêu, và thu hồi khi cần.
-- Dữ liệu tài khoản (chiến dịch, từ khóa, cụm từ tìm kiếm) được gửi tới Anthropic để phân tích.
-- Lệnh gọi API có thể bị timeout nếu phân tích quá lâu. Khi đó hạ `EFFORT` xuống `low`.
-- Khi tài khoản quá ít dữ liệu (như hiện tại: 4 chuyển đổi/tháng), Claude sẽ ghi `NOTE` thay vì đề xuất chắc chắn.
-- Việc này không thay thế khắc phục nguyên nhân quảng cáo ngừng chạy (thanh toán, trạng thái chiến dịch, chính sách).
+## Kiểm thử đã làm và chưa làm
+- **Đã làm:** `node --test test/autopilot.test.js test/e2e.test.js` (18 test pass). Gồm kiểm tra logic từng quy tắc và chạy trọn luồng đề xuất, duyệt, mô phỏng, áp dụng với Google Ads, Google Sheets và Claude GIẢ.
+- **Chưa làm, đây là rủi ro thật:** chưa chạy trên Google Ads, Sheets và API Claude thật. Mock không kiểm chứng được: tên trường GAQL, cách Google Ads Scripts trả về trường lặp (`final_urls`), các lệnh `responsiveSearchAdBuilder`, `newKeywordBuilder`, `createNegativeKeyword`, đọc tiêu đề quảng cáo cũ, tham số `fallbacks` và độ trễ gọi Claude (có thể timeout, khi đó hạ `EFFORT` xuống `low`). Hãy chạy **Xem trước** và gửi lại nhật ký nếu có lỗi.
+- Chế độ Xem trước của Google Ads không áp dụng thay đổi vào tài khoản nhưng có thể vẫn ghi Sheet, gửi email và gọi API Claude (có tính phí).
+
+## Lưu ý
+- API key nằm trong mã script, người có quyền xem script đều thấy. Dùng key riêng có giới hạn chi tiêu.
+- Dữ liệu tài khoản (chiến dịch, từ khóa, cụm từ tìm kiếm, quảng cáo) được gửi tới Anthropic để phân tích.
+- Quảng cáo mới vẫn phải qua duyệt chính sách của Google. Bạn chịu trách nhiệm về nội dung đã duyệt, hãy đọc kỹ trước khi chọn `Duyệt`.
+- Dữ liệu ít (như 4 chuyển đổi/tháng) thì Claude sẽ ghi `NOTE` nhiều hơn là đề xuất chắc chắn, và ĐCL chỉ có với từ khóa đủ lượt hiển thị.
+- Không thay thế việc sửa nguyên nhân quảng cáo ngừng chạy (thanh toán, trạng thái chiến dịch, chính sách).
