@@ -51,9 +51,9 @@
 .h4-pcard{background:#fff;border:1px solid #E3DDCF;border-radius:28px;overflow:hidden;box-shadow:0 30px 50px -34px rgba(11,31,68,.5)}
 .h4-tgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,1fr);gap:0 14px;align-items:center}
 .h4-thead{background:#0B1F44;color:#fff;padding:20px 30px}
-.h4-thead b{display:block;font-size:17px;font-weight:800;line-height:1.3}
+.h4-thead b{display:block;font-size:17px;font-weight:700;line-height:1.3}
 .h4-thead small{display:block;font-size:13.5px;color:#B9C6DE;line-height:1.4;margin-top:2px}
-.h4-thead .h4-lab{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#B9C6DE}
+.h4-thead .h4-lab{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#B9C6DE}
 .h4-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
 .h4-plist{list-style:none;margin:0;padding:14px;display:grid;gap:6px}
 .h4-row{padding:12px 16px;border-radius:14px;background:#F7F5EF;margin:0;animation:rise .7s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 55ms + 150ms);transition:background .15s,transform .15s}
@@ -64,16 +64,16 @@
 .h4-row.h4-end:hover{background:#12306A}
 .h4-endmid{grid-column:2 / -1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
 .h4-rng{font-weight:600;font-size:15.5px;line-height:1.35}
-.h4-tag{display:inline-block;margin-top:3px;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 9px;background:#F5A400;color:#1A1200}
+.h4-tag{display:inline-block;margin-top:3px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 9px;background:#F5A400;color:#1A1200}
 .h4-bar{display:block;margin-top:7px;height:7px;border-radius:7px;background:#E3DDCF;overflow:hidden}
 .h4-bar i{display:block;height:100%;border-radius:7px;background:#1D4ED8;transform-origin:left;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 55ms + 350ms)}
 .h4-bar.h4-sx i{background:#E08A00}
-.h4-amt{font-size:19px;font-weight:800;color:#0B1F44;font-variant-numeric:tabular-nums;line-height:1.2}
+.h4-amt{font-size:19px;font-weight:700;color:#0B1F44;font-variant-numeric:tabular-nums;line-height:1.2}
 .h4-svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#E3DDCF;border:1px solid #E3DDCF;border-radius:28px;overflow:hidden;box-shadow:0 30px 50px -34px rgba(11,31,68,.5)}
 .h4-svc-col{background:#fff;display:flex;flex-direction:column}
 .h4-svc-top{background:#0B1F44;color:#fff;padding:24px 28px 26px;transition:background .2s}
 .h4-svc-col:hover .h4-svc-top{background:#12306A}
-.h4-svc-tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:5px 12px}
+.h4-svc-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:5px 12px}
 .h4-svc-ic{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:#FFD27A}
 .h4-svc-list{list-style:none;margin:0;padding:8px 28px 18px;flex:1}
 .h4-svc-list li{position:relative;padding:14px 0 14px 34px;border-top:1px solid #EEE9DC;font-size:15.5px;line-height:1.5;margin:0}
@@ -118,8 +118,9 @@
 }
 .hp4 :is(h2,h3,p,li,a,span,b,strong,summary,address,ul,ol,details){font-family:inherit}.hp4 ul,.hp4 ol{list-style:none}.hp4 h2,.hp4 h3{text-transform:none}
 @media(max-width:640px){.hp4>div{padding:12px!important}.h4-plist{padding:10px}.h4-row{padding:11px 8px}.h4-row.h4-end{padding:14px 12px}.h4-tgrid{grid-template-columns:minmax(0,.85fr) minmax(0,1fr) minmax(0,1fr);gap:0 6px}.h4-amt{font-size:12.5px;letter-spacing:-.01em}.h4-rng{font-size:13px}.h4-thead{padding:14px 12px}.h4-thead b{font-size:13px}.h4-tag{border-radius:8px;line-height:1.3;padding:3px 8px;font-size:10.5px}}@media(max-width:360px){.h4-amt{font-size:11.3px}.h4-rng{font-size:12px}}
+.hp4 .h4-svc{grid-template-columns:repeat(3,minmax(0,1fr))}.hp4 .h4-svc-top{display:flex;flex-direction:column;justify-content:space-between;min-height:180px}.hp4 .h4-svc-top h3{margin:0!important}.hp4 .h4-svc-list{margin:0!important;padding:8px 28px 18px!important}.hp4 .h4-plist{margin:0!important;padding:14px!important}.hp4 .h4-ticks{margin-left:0!important;padding-left:0!important}.hp4 li{margin-left:0!important;margin-right:0!important}.hp4 .h4-float{animation:none!important}.hp4 .h4-hero-r b{font-size:28px!important}.hp4 .h4-hero-r span{font-size:17px!important}.hp4 .h4-faq details p{font-size:17px}.hp4 .h4-faq summary{font-size:18px}@media(max-width:860px){.hp4 .h4-svc{grid-template-columns:minmax(0,1fr)}.hp4 .h4-svc-top{min-height:0}}@media(max-width:640px){.hp4 .h4-plist{padding:10px!important}.hp4 .h4-svc-list{padding:6px 18px 14px!important}.hp4 .h4-hero-r b{font-size:22px!important}.hp4 .h4-hero-r span{font-size:15px!important}}
 </style>
-<div class="hp4" style="background:#F4F1EA;color:#0E1A2F;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:17px;line-height:1.6">
+<div class="hp4" style="background:#F4F1EA;color:#0E1A2F;font-family:'Be Vietnam Pro','Segoe UI',Roboto,Arial,sans-serif;font-size:17px;line-height:1.6">
 <div style="max-width:1180px;margin:0 auto;padding:24px 24px 24px">
 
 
@@ -129,7 +130,7 @@
 <div class="h4-ring" style="left:-140px;bottom:-230px;width:460px;height:460px"></div>
 
 <div style="position:relative;flex:1 1 460px;min-width:0">
-<p class="h4-in2" style="margin:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;line-height:1"><span style="font-size:18px;font-weight:600;color:#B9C6DE">Từ</span><span class="h4-price-shine" style="font-size:clamp(56px,9vw,108px);font-weight:800;letter-spacing:-.04em">900.000đ</span><span style="font-size:22px;font-weight:700;color:#FFD27A">/ quý</span></p>
+<p class="h4-in2" style="margin:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;line-height:1"><span style="font-size:18px;font-weight:600;color:#B9C6DE">Từ</span><span class="h4-price-shine" style="font-size:clamp(56px,9vw,108px);font-weight:700;letter-spacing:-.04em">900.000đ</span><span style="font-size:22px;font-weight:700;color:#FFD27A">/ quý</span></p>
 <p class="h4-in3" style="margin:22px 0 24px;max-width:32em;font-size:18px;color:#D3DDEF">Bảng giá dịch vụ kế toán trọn gói tại TP.HCM: phí tính theo số hóa đơn phát sinh mỗi quý.</p>
 <ul class="h4-ticks h4-light h4-in3" style="margin:0 0 32px;color:#E6EDF9;font-size:16px">
 <li>Kê khai thuế hàng tháng, nộp báo cáo quý, quyết toán năm</li>
@@ -142,11 +143,11 @@
 </div>
 </div>
 
-<div style="position:relative;flex:1 1 340px;max-width:480px;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:14px">
-<div class="h4-float" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px"><b style="display:block;font-size:24px;font-weight:800;line-height:1.2;color:#FFD27A;letter-spacing:-.02em">Sai sót, Hưng Phúc chịu</b><span style="display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:#D3DDEF">Làm sai dẫn đến bị phạt thuế, Hưng Phúc chịu trách nhiệm hoàn toàn</span></div>
-<div class="h4-float h4-d2" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px"><b style="display:block;font-size:24px;font-weight:800;line-height:1.2;color:#FFD27A;letter-spacing:-.02em">Thay bạn làm việc với thuế</b><span style="display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:#D3DDEF">Làm việc với cơ quan thuế, giải trình sổ sách khi thanh tra, đăng ký và xử lý BHXH</span></div>
-<div class="h4-float h4-d3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px"><b style="display:block;font-size:24px;font-weight:800;line-height:1.2;color:#FFD27A;letter-spacing:-.02em">Luôn sẵn sàng tư vấn</b><span style="display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:#D3DDEF">Tư vấn pháp lý, quy định thuế và lao động cho doanh nghiệp</span></div>
-<div class="h4-float h4-d4" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px"><b style="display:block;font-size:24px;font-weight:800;line-height:1.2;color:#FFD27A;letter-spacing:-.02em">Kế toán riêng</b><span style="display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:#D3DDEF">1 kế toán + 1 quản lý phụ trách</span></div>
+<div class="h4-hero-r" style="position:relative;flex:1 1 420px;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:14px">
+<div class="h4-float" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px"><b style="display:block;font-size:24px;font-weight:700;line-height:1.2;color:#FFD27A;letter-spacing:-.02em">Sai sót, Hưng Phúc chịu</b><span style="display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:#D3DDEF">Làm sai dẫn đến bị phạt thuế, Hưng Phúc chịu trách nhiệm hoàn toàn</span></div>
+<div class="h4-float h4-d2" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px"><b style="display:block;font-size:24px;font-weight:700;line-height:1.2;color:#FFD27A;letter-spacing:-.02em">Thay bạn làm việc với thuế</b><span style="display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:#D3DDEF">Làm việc với cơ quan thuế, giải trình sổ sách khi thanh tra, đăng ký và xử lý BHXH</span></div>
+<div class="h4-float h4-d3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px"><b style="display:block;font-size:24px;font-weight:700;line-height:1.2;color:#FFD27A;letter-spacing:-.02em">Luôn sẵn sàng tư vấn</b><span style="display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:#D3DDEF">Tư vấn pháp lý, quy định thuế và lao động cho doanh nghiệp</span></div>
+<div class="h4-float h4-d4" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px"><b style="display:block;font-size:24px;font-weight:700;line-height:1.2;color:#FFD27A;letter-spacing:-.02em">Kế toán riêng</b><span style="display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:#D3DDEF">1 kế toán + 1 quản lý phụ trách</span></div>
 </div>
 </section>
 
@@ -159,8 +160,8 @@
 
 
 <section id="bang-gia" style="margin-top:clamp(48px,7vw,88px)">
-<p style="margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Bảng giá</p>
-<h2 style="margin:0 0 10px;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:800;color:#0B1F44">Bảng giá dịch vụ kế toán trọn gói theo quý</h2>
+<p style="margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Bảng giá</p>
+<h2 style="margin:0 0 10px;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:700;color:#0B1F44">Bảng giá dịch vụ kế toán trọn gói theo quý</h2>
 <p style="margin:0 0 28px;max-width:44em;color:#55627A">Bảng giá tại TP. Hồ Chí Minh: hai nhóm lĩnh vực đặt cạnh nhau trong cùng một bảng để bạn dễ so sánh.</p>
 
 <div class="h4-pcard">
@@ -194,7 +195,7 @@
 
 <div style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 28px;background:#fff;border:1px solid #E3DDCF;border-radius:28px;padding:clamp(22px,3vw,34px)">
 <div style="flex:1 1 320px;min-width:0">
-<div style="font-size:clamp(22px,2.4vw,30px);font-weight:800;line-height:1.25;color:#0B1F44;letter-spacing:-.02em">Gọi hoặc nhắn Zalo để nhận báo giá cho doanh nghiệp</div>
+<div style="font-size:clamp(22px,2.4vw,30px);font-weight:700;line-height:1.25;color:#0B1F44;letter-spacing:-.02em">Gọi hoặc nhắn Zalo để nhận báo giá cho doanh nghiệp</div>
 <div style="margin-top:6px;color:#55627A">Cho biết lĩnh vực và số hóa đơn dự kiến mỗi quý.</div>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:12px">
@@ -206,13 +207,13 @@
 
 
 <section id="cong-viec" style="margin-top:clamp(56px,8vw,104px)">
-<p style="margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Dịch vụ</p>
-<h2 style="margin:0 0 10px;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:800;color:#0B1F44">Dịch vụ kế toán trọn gói gồm những gì?</h2>
+<p style="margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Dịch vụ</p>
+<h2 style="margin:0 0 10px;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:700;color:#0B1F44">Dịch vụ kế toán trọn gói gồm những gì?</h2>
 <p style="margin:0 0 28px;color:#55627A">Ba nhóm công việc, thực hiện xuyên suốt trong năm.</p>
 <div class="h4-svc">
-<div class="h4-svc-col"><div class="h4-svc-top"><div style="display:flex;justify-content:space-between;align-items:center;margin:0 0 18px"><span class="h4-svc-tag" style="background:#6C93FF;color:#0B1F44">Hàng tháng</span><div class="h4-svc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div></div><h3 style="margin:0;font-size:22px;font-weight:800;line-height:1.3;color:#fff">Kê khai thuế hàng tháng</h3></div><ul class="h4-svc-list"><li>Lập và gửi hồ sơ, báo cáo thuế hàng tháng, hàng quý</li><li>Hướng dẫn viết hóa đơn, lập chứng từ</li><li>Phân loại chứng từ, in và hoàn chỉnh sổ sách</li><li>Làm việc với cơ quan thuế khi có yêu cầu</li><li>Đăng ký và xử lý BHXH</li><li>Tư vấn quy định thuế, lao động</li></ul></div>
-<div class="h4-svc-col"><div class="h4-svc-top"><div style="display:flex;justify-content:space-between;align-items:center;margin:0 0 18px"><span class="h4-svc-tag" style="background:#5EE0B0;color:#0B1F44">Hàng quý</span><div class="h4-svc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg></div></div><h3 style="margin:0;font-size:22px;font-weight:800;line-height:1.3;color:#fff">Nộp báo cáo quý</h3></div><ul class="h4-svc-list"><li>Báo cáo thuế GTGT</li><li>Báo cáo sử dụng hóa đơn</li><li>Báo cáo thuế TNCN tạm tính</li><li>Báo cáo tài chính cuối năm</li></ul></div>
-<div class="h4-svc-col"><div class="h4-svc-top"><div style="display:flex;justify-content:space-between;align-items:center;margin:0 0 18px"><span class="h4-svc-tag" style="background:#F5A400;color:#1A1200">Hàng năm</span><div class="h4-svc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg></div></div><h3 style="margin:0;font-size:22px;font-weight:800;line-height:1.3;color:#fff">Quyết toán năm</h3></div><ul class="h4-svc-list"><li>Lập quyết toán thuế, báo cáo tài chính</li><li>Lập các báo cáo thống kê</li><li>Giải trình sổ sách khi thanh tra thuế</li><li>Đăng ký hồ sơ cho năm mới</li></ul></div>
+<div class="h4-svc-col"><div class="h4-svc-top"><div style="display:flex;justify-content:space-between;align-items:center;margin:0 0 18px"><span class="h4-svc-tag" style="background:#6C93FF;color:#0B1F44">Hàng tháng</span><div class="h4-svc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div></div><h3 style="margin:0;font-size:22px;font-weight:700;line-height:1.3;color:#fff">Kê khai thuế hàng tháng</h3></div><ul class="h4-svc-list"><li>Lập và gửi hồ sơ, báo cáo thuế hàng tháng, hàng quý</li><li>Hướng dẫn viết hóa đơn, lập chứng từ</li><li>Phân loại chứng từ, in và hoàn chỉnh sổ sách</li><li>Làm việc với cơ quan thuế khi có yêu cầu</li><li>Đăng ký và xử lý BHXH</li><li>Tư vấn quy định thuế, lao động</li></ul></div>
+<div class="h4-svc-col"><div class="h4-svc-top"><div style="display:flex;justify-content:space-between;align-items:center;margin:0 0 18px"><span class="h4-svc-tag" style="background:#5EE0B0;color:#0B1F44">Hàng quý</span><div class="h4-svc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg></div></div><h3 style="margin:0;font-size:22px;font-weight:700;line-height:1.3;color:#fff">Nộp báo cáo quý</h3></div><ul class="h4-svc-list"><li>Báo cáo thuế GTGT</li><li>Báo cáo sử dụng hóa đơn</li><li>Báo cáo thuế TNCN tạm tính</li><li>Báo cáo tài chính cuối năm</li></ul></div>
+<div class="h4-svc-col"><div class="h4-svc-top"><div style="display:flex;justify-content:space-between;align-items:center;margin:0 0 18px"><span class="h4-svc-tag" style="background:#F5A400;color:#1A1200">Hàng năm</span><div class="h4-svc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg></div></div><h3 style="margin:0;font-size:22px;font-weight:700;line-height:1.3;color:#fff">Quyết toán năm</h3></div><ul class="h4-svc-list"><li>Lập quyết toán thuế, báo cáo tài chính</li><li>Lập các báo cáo thống kê</li><li>Giải trình sổ sách khi thanh tra thuế</li><li>Đăng ký hồ sơ cho năm mới</li></ul></div>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0">
 <a class="h4-chip-link" href="https://dailythuehungphuc.com/dich-vu-quyet-toan-thue/">Dịch vụ quyết toán thuế</a>
@@ -225,31 +226,31 @@
 
 <section id="cam-ket" style="margin-top:clamp(56px,8vw,104px);display:flex;flex-wrap:wrap;gap:32px 56px;align-items:flex-start">
 <div style="flex:1 1 300px;min-width:0">
-<p style="margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Cam kết</p>
-<h2 style="margin:0 0 24px;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:800;color:#0B1F44">5 cam kết của Hưng Phúc</h2>
+<p style="margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Cam kết</p>
+<h2 style="margin:0 0 24px;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:700;color:#0B1F44">5 cam kết của Hưng Phúc</h2>
 <div class="h4-lift" style="background:#0B1F44;color:#fff;border-radius:26px;padding:28px">
-<div style="font-size:64px;font-weight:800;line-height:1;letter-spacing:-.04em;color:#F5A400">1 + 1</div>
+<div style="font-size:64px;font-weight:700;line-height:1;letter-spacing:-.04em;color:#F5A400">1 + 1</div>
 <div style="margin-top:10px;font-size:18px;font-weight:700">Kế toán riêng</div>
 <div style="font-size:15px;color:#B9C6DE">1 kế toán + 1 quản lý phụ trách</div>
 </div>
 </div>
 <ol style="flex:1.6 1 440px;min-width:0;list-style:none;margin:0;padding:0;display:grid;gap:0">
-<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:800;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">01</span><span style="font-size:18px;font-weight:600;color:#0B1F44">Luôn sẵn sàng tư vấn pháp lý, thuế cho doanh nghiệp.</span></li>
-<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:800;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">02</span><span style="font-size:18px;font-weight:600;color:#0B1F44">Một kế toán và một quản lý kế toán phụ trách sổ sách của công ty.</span></li>
-<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:800;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">03</span><span style="font-size:18px;font-weight:600;color:#0B1F44">Nếu Hưng Phúc làm sai dẫn đến bị phạt thuế, Hưng Phúc chịu trách nhiệm hoàn toàn.</span></li>
-<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:800;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">04</span><span style="font-size:18px;font-weight:600;color:#0B1F44">An toàn và bảo mật tuyệt đối số liệu của công ty.</span></li>
-<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2;border-bottom:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:800;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">05</span><span style="font-size:18px;font-weight:600;color:#0B1F44">Ổn định, lâu dài, đồng hành cùng doanh nghiệp.</span></li>
+<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:700;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">01</span><span style="font-size:18px;font-weight:600;color:#0B1F44">Luôn sẵn sàng tư vấn pháp lý, thuế cho doanh nghiệp.</span></li>
+<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:700;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">02</span><span style="font-size:18px;font-weight:600;color:#0B1F44">Một kế toán và một quản lý kế toán phụ trách sổ sách của công ty.</span></li>
+<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:700;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">03</span><span style="font-size:18px;font-weight:600;color:#0B1F44">Nếu Hưng Phúc làm sai dẫn đến bị phạt thuế, Hưng Phúc chịu trách nhiệm hoàn toàn.</span></li>
+<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:700;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">04</span><span style="font-size:18px;font-weight:600;color:#0B1F44">An toàn và bảo mật tuyệt đối số liệu của công ty.</span></li>
+<li style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid #D9D2C2;border-bottom:1px solid #D9D2C2"><span style="flex:0 0 auto;font-size:34px;font-weight:700;line-height:1;color:#E08A00;letter-spacing:-.03em;min-width:48px">05</span><span style="font-size:18px;font-weight:600;color:#0B1F44">Ổn định, lâu dài, đồng hành cùng doanh nghiệp.</span></li>
 </ol>
 </section>
 
 
 <section id="nhan-bao-gia" style="margin-top:clamp(56px,8vw,104px)">
-<p style="margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Báo giá</p>
-<h2 style="margin:0 0 28px;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:800;color:#0B1F44">Cách nhận báo giá dịch vụ kế toán trọn gói</h2>
+<p style="margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Báo giá</p>
+<h2 style="margin:0 0 28px;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:700;color:#0B1F44">Cách nhận báo giá dịch vụ kế toán trọn gói</h2>
 <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
-<li class="h4-lift" style="background:#fff;border:1px solid #E3DDCF;border-radius:26px;padding:28px"><div style="width:48px;height:48px;border-radius:50%;background:#0B1F44;color:#FFD27A;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 0 16px">1</div><b style="display:block;font-size:20px;color:#0B1F44;margin-bottom:4px">Liên hệ</b><span style="color:#3B4760">Gọi hotline, nhắn Zalo hoặc để lại số điện thoại.</span></li>
-<li class="h4-lift" style="background:#fff;border:1px solid #E3DDCF;border-radius:26px;padding:28px"><div style="width:48px;height:48px;border-radius:50%;background:#0B1F44;color:#FFD27A;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 0 16px">2</div><b style="display:block;font-size:20px;color:#0B1F44;margin-bottom:4px">Cho biết thông tin</b><span style="color:#3B4760">Lĩnh vực và số hóa đơn dự kiến mỗi quý.</span></li>
-<li class="h4-lift" style="background:#fff;border:1px solid #E3DDCF;border-radius:26px;padding:28px"><div style="width:48px;height:48px;border-radius:50%;background:#F5A400;color:#1A1200;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 0 16px">3</div><b style="display:block;font-size:20px;color:#0B1F44;margin-bottom:4px">Nhận báo giá</b><span style="color:#3B4760">Hưng Phúc tư vấn và báo giá phù hợp.</span></li>
+<li class="h4-lift" style="background:#fff;border:1px solid #E3DDCF;border-radius:26px;padding:28px"><div style="width:48px;height:48px;border-radius:50%;background:#0B1F44;color:#FFD27A;font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 0 16px">1</div><b style="display:block;font-size:20px;color:#0B1F44;margin-bottom:4px">Liên hệ</b><span style="color:#3B4760">Gọi hotline, nhắn Zalo hoặc để lại số điện thoại.</span></li>
+<li class="h4-lift" style="background:#fff;border:1px solid #E3DDCF;border-radius:26px;padding:28px"><div style="width:48px;height:48px;border-radius:50%;background:#0B1F44;color:#FFD27A;font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 0 16px">2</div><b style="display:block;font-size:20px;color:#0B1F44;margin-bottom:4px">Cho biết thông tin</b><span style="color:#3B4760">Lĩnh vực và số hóa đơn dự kiến mỗi quý.</span></li>
+<li class="h4-lift" style="background:#fff;border:1px solid #E3DDCF;border-radius:26px;padding:28px"><div style="width:48px;height:48px;border-radius:50%;background:#F5A400;color:#1A1200;font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 0 16px">3</div><b style="display:block;font-size:20px;color:#0B1F44;margin-bottom:4px">Nhận báo giá</b><span style="color:#3B4760">Hưng Phúc tư vấn và báo giá phù hợp.</span></li>
 </ol>
 <ul style="list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px">
 <li style="background:#E7EEFF;color:#1238A8;border-radius:999px;padding:9px 18px;font-size:15px;font-weight:700">Công ty mới thành lập</li>
@@ -261,12 +262,12 @@
 </section>
 
 
-<section id="hoi-dap" style="margin-top:clamp(56px,8vw,104px);display:flex;flex-wrap:wrap;gap:28px 56px;align-items:flex-start">
-<div style="flex:1 1 280px;min-width:0">
-<p style="margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Hỏi đáp</p>
-<h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:800;color:#0B1F44">Câu hỏi thường gặp về bảng giá dịch vụ kế toán trọn gói</h2>
+<section id="hoi-dap" style="margin-top:clamp(56px,8vw,104px)">
+<div style="margin:0 0 28px">
+<p style="margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1D4ED8">Hỏi đáp</p>
+<h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.025em;font-weight:700;color:#0B1F44">Câu hỏi thường gặp về bảng giá dịch vụ kế toán trọn gói</h2>
 </div>
-<div class="h4-faq" style="flex:1.7 1 460px;min-width:0">
+<div class="h4-faq" style="width:100%">
 <details open=""><summary>Bảng giá dịch vụ kế toán trọn gói tính theo tiêu chí nào?</summary><p>Theo tổng số hóa đơn phát sinh trong quý và lĩnh vực hoạt động của doanh nghiệp. Mức phí tính theo quý.</p></details>
 <details><summary>Doanh nghiệp không phát sinh hóa đơn có mức phí bao nhiêu?</summary><p>900.000đ/quý ở cả hai nhóm lĩnh vực.</p></details>
 <details><summary>Từ 186 hóa đơn mỗi quý thì tính phí thế nào?</summary><p>Phí thỏa thuận theo tình hình thực tế. Gọi hoặc nhắn Zalo để nhận báo giá dịch vụ kế toán trọn gói.</p></details>
@@ -282,7 +283,7 @@
 <div class="h4-ring" style="left:-180px;top:-240px;width:560px;height:560px"></div>
 <div class="h4-ring h4-rev" style="right:-200px;bottom:-280px;width:600px;height:600px"></div>
 <div style="position:relative">
-<h2 id="tom-lai" style="margin:0 0 12px;font-size:clamp(28px,3.6vw,46px);line-height:1.15;letter-spacing:-.025em;font-weight:800;color:#fff">Nhận báo giá dịch vụ kế toán trọn gói</h2>
+<h2 id="tom-lai" style="margin:0 0 12px;font-size:clamp(28px,3.6vw,46px);line-height:1.15;letter-spacing:-.025em;font-weight:700;color:#fff">Nhận báo giá dịch vụ kế toán trọn gói</h2>
 <p style="margin:0 auto;max-width:34em;font-size:18px;color:#D3DDEF">Bảng giá dịch vụ kế toán trọn gói từ 900.000đ/quý. Liên hệ để nhận báo giá cho doanh nghiệp của bạn.</p>
 <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:28px 0">
 <a class="h4-btn h4-btn-amber" href="tel:0986883137"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Gọi 098.688.3137</a>
