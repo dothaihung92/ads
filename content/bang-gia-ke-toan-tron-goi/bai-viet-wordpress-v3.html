@@ -1,0 +1,206 @@
+<style>
+.hp3{--ink:#0f172a;--navy:#0a1f44;--blue:#2563eb;--cyan:#06b6d4;--orange:#ff8a00;--amber:#ffb000;--green:#16a34a;--bg:#eef4ff;--line:#dbe6ff;--muted:#5b6b86;color:var(--ink);font-size:17px;line-height:1.65}
+.hp3 *{box-sizing:border-box}.hp3 a{color:var(--blue)}.hp3 svg{flex:0 0 auto}
+.hp3 h2{font-size:1.85em;line-height:1.2;color:var(--navy);margin:0 0 .3em;letter-spacing:-.02em;font-weight:800}
+.hp3 h3{font-size:1.12em;color:var(--navy);margin:0 0 .5em;line-height:1.3;font-weight:800}
+.hp3-sec{margin:56px 0 0}.hp3-eye{display:inline-block;font-size:.74em;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:var(--bg);border-radius:999px;padding:5px 12px;margin:0 0 10px}
+.hp3-sub{color:var(--muted);margin:0 0 18px}
+.hp3-hero{position:relative;overflow:hidden;border-radius:28px;color:#fff;display:grid;grid-template-columns:1.1fr .9fr;background:radial-gradient(900px 420px at 92% -10%,#3b82f6 0%,transparent 60%),radial-gradient(700px 380px at -8% 115%,#06b6d4 0%,transparent 55%),linear-gradient(135deg,#071a3d,#0b2d6b);box-shadow:0 34px 60px -26px rgba(10,31,68,.65)}
+.hp3-hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:38px 38px;-webkit-mask-image:linear-gradient(110deg,#000,transparent 65%);mask-image:linear-gradient(110deg,#000,transparent 65%)}
+.hp3-hbody{position:relative;padding:46px 40px 42px}
+.hp3-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,176,0,.16);border:1px solid rgba(255,176,0,.5);color:#ffd24d;font-size:.76em;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin:0 0 16px}
+.hp3-price{margin:0 0 6px;line-height:1;font-weight:900;letter-spacing:-.03em;display:flex;align-items:baseline;gap:10px;flex-wrap:nowrap;white-space:nowrap}
+.hp3-price small{font-size:.8rem;font-weight:700;color:#bcd2f5;letter-spacing:.02em;text-transform:none}
+.hp3-price b{font-size:3.8rem;background:linear-gradient(180deg,#fff 10%,#ffd24d 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hp3-price span{font-size:1.2rem;font-weight:700;color:#bcd2f5}
+.hp3-lead{color:#d6e4fb;margin:10px 0 18px;font-size:1.06em;max-width:34em}
+.hp3-checks{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
+.hp3-checks li{display:flex;gap:10px;align-items:flex-start;font-size:.96em;margin:0}.hp3-checks svg{color:#5eead4;margin-top:3px}
+.hp3-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hp3 a.hp3-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 26px;border-radius:14px;font-weight:800;text-decoration:none;line-height:1.1;transition:transform .15s,box-shadow .15s}
+.hp3 a.hp3-btn:hover{transform:translateY(-2px)}
+.hp3 a.hp3-call{background:linear-gradient(135deg,var(--amber),var(--orange));color:#2a1700;box-shadow:0 12px 26px -8px rgba(255,138,0,.75)}
+.hp3 a.hp3-zalo{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.hp3-hphoto{position:relative;padding:34px 34px 34px 0}
+.hp3-hphoto img{display:block;width:100%;height:100%;min-height:330px;object-fit:cover;border-radius:24px;border:5px solid rgba(255,255,255,.9);box-shadow:0 24px 40px -18px rgba(0,0,0,.6)}
+.hp3-float{position:absolute;background:#fff;color:var(--navy);border-radius:16px;padding:10px 16px;box-shadow:0 18px 30px -12px rgba(0,0,0,.5);line-height:1.15}
+.hp3-float b{display:block;font-size:1.5em;font-weight:900;color:var(--blue)}.hp3-float span{font-size:.78em;color:var(--muted);font-weight:600}
+.hp3-f1{left:-6px;top:58px}.hp3-f2{right:52px;bottom:52px}
+.hp3-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 0}
+.hp3-stat{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;box-shadow:0 14px 24px -18px rgba(10,31,68,.5)}
+.hp3-ic{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(135deg,var(--blue),var(--cyan))}.hp3-ic svg{width:22px;height:22px}
+.hp3-stat b{display:block;font-size:1.25em;color:var(--navy);line-height:1.1;font-weight:900}.hp3-stat span{font-size:.84em;color:var(--muted)}
+.hp3-pricebox{background:linear-gradient(180deg,#eaf1ff,#f7faff);border:1px solid var(--line);border-radius:30px;padding:34px 30px 30px}
+.hp3-calc{display:grid;grid-template-columns:1.5fr .8fr 1fr;gap:14px;align-items:end;border-radius:22px;padding:22px;background:linear-gradient(135deg,#0a1f44,#12408a);box-shadow:0 22px 36px -22px rgba(10,31,68,.8);margin:0 0 20px;color:#fff}
+.hp3-calc label{display:block;font-size:.76em;font-weight:800;color:#b6caef;margin:0 0 6px;text-transform:uppercase;letter-spacing:.08em}
+.hp3-calc select,.hp3-calc input{width:100%;height:50px;border:0;border-radius:13px;padding:0 14px;font-size:1em;background:#fff;color:var(--ink)}
+.hp3-calc select:focus,.hp3-calc input:focus{outline:3px solid var(--amber)}
+.hp3-out{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:8px 16px;min-height:50px;display:flex;flex-direction:column;justify-content:center}
+.hp3-out small{font-size:.7em;color:#b6caef;text-transform:uppercase;letter-spacing:.08em;font-weight:800}.hp3-out output{font-size:1.25em;font-weight:900;line-height:1.15;color:#ffd24d}
+.hp3-tabs{margin:0}.hp3-radio{position:absolute;opacity:0;pointer-events:none}
+.hp3-tablist{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 16px}
+.hp3-tablist label{display:block;text-align:center;padding:13px 10px;border:2px solid var(--line);border-radius:16px;background:#fff;cursor:pointer;font-weight:800;color:var(--navy);line-height:1.25;transition:all .15s}
+.hp3-tablist label small{display:block;font-weight:600;color:var(--muted)}
+#hp3-s1:checked~.hp3-tablist label[for=hp3-s1],#hp3-s2:checked~.hp3-tablist label[for=hp3-s2]{background:linear-gradient(135deg,var(--blue),#1d4ed8);border-color:transparent;color:#fff;box-shadow:0 14px 24px -14px rgba(37,99,235,.9)}
+#hp3-s1:checked~.hp3-tablist label[for=hp3-s1] small,#hp3-s2:checked~.hp3-tablist label[for=hp3-s2] small{color:#cfe0ff}
+#hp3-s1:focus-visible~.hp3-tablist label[for=hp3-s1],#hp3-s2:focus-visible~.hp3-tablist label[for=hp3-s2]{outline:3px solid var(--amber);outline-offset:2px}
+.hp3-panel{display:none}#hp3-s1:checked~.hp3-p1,#hp3-s2:checked~.hp3-p2{display:block}
+.hp3-tiers{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.hp3-tier{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 16px 18px;box-shadow:0 14px 24px -20px rgba(10,31,68,.6);margin:0}
+.hp3-tier .rng{display:inline-block;font-size:.78em;font-weight:800;color:var(--blue);background:var(--bg);border-radius:999px;padding:4px 11px}
+.hp3-tier .amt{display:block;font-size:1.5em;font-weight:900;color:var(--navy);margin:12px 0 0;line-height:1.1;letter-spacing:-.02em}
+.hp3-tier .per{display:block;font-size:.78em;color:var(--muted)}
+.hp3-tier .bar{display:block;height:7px;border-radius:7px;background:#e6eeff;margin-top:14px;overflow:hidden}.hp3-tier .bar i{display:block;height:100%;border-radius:7px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.hp3-tier-top{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;background:linear-gradient(135deg,var(--amber),var(--orange));border:0;color:#2a1700;padding:20px 24px}
+.hp3-tier-top .rng{background:rgba(255,255,255,.55);color:#2a1700;font-size:.86em}.hp3-tier-top .amt{color:#2a1700;font-size:2.3em;margin:0 0 0 auto}.hp3-tier-top .per{color:#4a2d00;font-weight:700}
+.hp3-tag{font-size:.72em;font-weight:900;letter-spacing:.12em;text-transform:uppercase;background:#2a1700;color:#ffd24d;border-radius:999px;padding:5px 12px}
+.hp3-tier-end{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;background:linear-gradient(135deg,#0a1f44,#12408a);border:0;color:#fff;padding:20px 24px}
+.hp3-tier-end .rng{background:rgba(255,255,255,.14);color:#fff}.hp3-tier-end .amt{color:#ffd24d;margin:0}.hp3 a.hp3-mini{margin-left:auto;background:#fff;color:var(--navy);font-weight:800;text-decoration:none;border-radius:12px;padding:11px 18px}
+.hp3-note{font-size:.86em;color:var(--muted);margin:14px 4px 0}
+.hp3-poster{margin:22px 0 0;text-align:center}.hp3-poster img{max-width:100%;height:auto;border-radius:20px;box-shadow:0 26px 40px -24px rgba(10,31,68,.7)}.hp3-poster figcaption{font-size:.86em;color:var(--muted);margin-top:8px}
+.hp3-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hp3-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 22px 22px;box-shadow:0 18px 30px -24px rgba(10,31,68,.6);overflow:hidden}
+.hp3-card:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.hp3-card:nth-child(2):before{background:linear-gradient(90deg,var(--cyan),var(--green))}.hp3-card:nth-child(3):before{background:linear-gradient(90deg,var(--amber),var(--orange))}
+.hp3-card .hp3-ic{margin:0 0 14px}.hp3-card:nth-child(2) .hp3-ic{background:linear-gradient(135deg,var(--cyan),var(--green))}.hp3-card:nth-child(3) .hp3-ic{background:linear-gradient(135deg,var(--amber),var(--orange))}
+.hp3-card ul{margin:0;padding:0;list-style:none}.hp3-card li{position:relative;padding:5px 0 5px 24px;font-size:.95em;margin:0}
+.hp3-card li:before{content:"";position:absolute;left:2px;top:13px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:3px solid var(--blue)}
+.hp3-chips{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 0;padding:0;list-style:none}
+.hp3-chips li{margin:0}.hp3-chips-plain li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.9em;font-weight:700;color:var(--navy)}.hp3-chips a{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.9em;font-weight:700;text-decoration:none}.hp3-chips a:hover{background:var(--bg)}
+.hp3-trust{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:stretch}
+.hp3-promise{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.hp3-promise li{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin:0;box-shadow:0 14px 24px -22px rgba(10,31,68,.6)}
+.hp3-promise .hp3-ic{width:44px;height:44px;border-radius:13px}.hp3-promise li:nth-child(2) .hp3-ic{background:linear-gradient(135deg,var(--cyan),var(--green))}.hp3-promise li:nth-child(3) .hp3-ic{background:linear-gradient(135deg,var(--amber),var(--orange))}.hp3-promise li:nth-child(4) .hp3-ic{background:linear-gradient(135deg,#7c3aed,var(--blue))}.hp3-promise li:nth-child(5) .hp3-ic{background:linear-gradient(135deg,var(--green),var(--cyan))}
+.hp3-promise span{font-weight:600;color:var(--navy)}
+.hp3-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.25fr 1fr;gap:10px}
+.hp3-mosaic img{display:block;width:100%;height:100%;object-fit:cover;border-radius:20px;box-shadow:0 18px 30px -20px rgba(10,31,68,.7)}.hp3-mosaic img:first-child{grid-column:1/-1}
+.hp3-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0;padding:0;list-style:none;counter-reset:s}
+.hp3-steps li{counter-increment:s;position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 22px;margin:0;box-shadow:0 18px 30px -24px rgba(10,31,68,.6)}
+.hp3-steps li:before{content:counter(s);display:flex;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;font-weight:900;font-size:1.2em;align-items:center;justify-content:center;margin:0 0 12px;box-shadow:0 10px 18px -8px rgba(37,99,235,.8)}
+.hp3-steps b{display:block;color:var(--navy);font-size:1.08em;margin-bottom:2px}
+.hp3-faq details{border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:16px;margin:0 0 10px;background:#fff;overflow:hidden}
+.hp3-faq summary{cursor:pointer;padding:16px 20px;font-weight:800;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:12px}
+.hp3-faq summary::-webkit-details-marker{display:none}.hp3-faq summary:after{content:"+";font-size:1.4em;line-height:1;color:var(--blue)}.hp3-faq details[open] summary:after{content:"–"}
+.hp3-faq details p{margin:0;padding:0 20px 18px;color:#334155}
+.hp3-end{position:relative;overflow:hidden;border-radius:30px;padding:48px 34px;margin:56px 0 0;text-align:center;color:#fff;background:radial-gradient(700px 320px at 15% 0%,#3b82f6 0%,transparent 60%),radial-gradient(600px 300px at 100% 100%,#06b6d4 0%,transparent 55%),linear-gradient(135deg,#071a3d,#0b2d6b);box-shadow:0 34px 60px -26px rgba(10,31,68,.65)}
+.hp3 .hp3-end h2{color:#fff;font-size:2.1em;margin:0 0 8px}.hp3-end p{margin:0 auto 8px;color:#d6e4fb;max-width:34em}
+.hp3-end .hp3-cta{justify-content:center;margin:22px 0}.hp3-end address{font-style:normal;font-size:.86em;color:#b6caef;line-height:1.7}.hp3 .hp3-end a:not(.hp3-btn){color:#fff}
+@media(max-width:860px){
+.hp3{font-size:16px}.hp3-sec{margin-top:44px}.hp3 h2{font-size:1.5em}
+.hp3-hero{grid-template-columns:1fr}.hp3-hphoto{display:none}.hp3-hbody{padding:32px 22px 28px}.hp3-price b{font-size:2.6rem}.hp3 a.hp3-btn{width:100%}
+.hp3-stats{grid-template-columns:1fr}.hp3-stat{padding:12px 14px}
+.hp3-pricebox{padding:20px 14px 18px;border-radius:24px}.hp3-calc{grid-template-columns:1fr;padding:18px}
+.hp3-tiers{grid-template-columns:repeat(2,1fr);gap:10px}.hp3-tier{padding:13px 12px 15px}.hp3-tier .amt{font-size:1.2em}.hp3-tier .rng{font-size:.7em}
+.hp3-tier-top .amt{font-size:1.9em;margin-left:0}.hp3-tier-top,.hp3-tier-end{padding:18px}.hp3 a.hp3-mini{margin-left:0;width:100%;text-align:center}
+.hp3-grid,.hp3-steps,.hp3-trust{grid-template-columns:1fr}.hp3-end{padding:34px 20px}.hp3 .hp3-end h2{font-size:1.6em}}
+</style>
+<div class="hp3">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="hp3-i1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol><symbol id="hp3-i2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol><symbol id="hp3-i3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol><symbol id="hp3-i4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol><symbol id="hp3-i5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></symbol><symbol id="hp3-i6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></symbol><symbol id="hp3-i7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol><symbol id="hp3-i8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></symbol><symbol id="hp3-i9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="hp3-i10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol><symbol id="hp3-i11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol></svg>
+<section class="hp3-hero">
+<div class="hp3-hbody">
+<p class="hp3-chip"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i11"></use></svg> Bảng giá cập nhật 11/2026</p>
+<p class="hp3-price"><small>Từ</small><b>900.000đ</b><span>/ quý</span></p>
+<p class="hp3-lead">Bảng giá dịch vụ kế toán trọn gói tại TP.HCM: phí tính theo số hóa đơn phát sinh mỗi quý.</p>
+<ul class="hp3-checks">
+<li><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i3"></use></svg><span>Kê khai thuế hàng tháng, nộp báo cáo quý, quyết toán năm</span></li>
+<li><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i3"></use></svg><span>Một kế toán và một quản lý kế toán phụ trách sổ sách</span></li>
+<li><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i3"></use></svg><span>Gọi hoặc nhắn Zalo để nhận báo giá cho doanh nghiệp</span></li>
+</ul>
+<div class="hp3-cta"><a class="hp3-btn hp3-call" href="tel:0986883137"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i1"></use></svg>Gọi 098.688.3137</a><a class="hp3-btn hp3-zalo" href="https://zalo.me/0986883137" target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i2"></use></svg>Nhắn Zalo</a></div>
+</div>
+<div class="hp3-hphoto"><img src="https://dailythuehungphuc.com/wp-content/uploads/2021/05/d%E1%BB%8Bch-v%E1%BB%A5-k%E1%BA%BF-to%C3%A1n-h%C6%B0ng-ph%C3%BAc-1-1024x750.jpg" alt="Văn phòng kế toán với tủ hồ sơ và nhân viên đang làm việc, dịch vụ kế toán trọn gói Hưng Phúc" width="1024" height="750" loading="lazy" decoding="async"><div class="hp3-float hp3-f1"><b>13 bậc</b><span>phí theo số hóa đơn</span></div><div class="hp3-float hp3-f2"><b>2 nhóm</b><span>lĩnh vực hoạt động</span></div></div>
+</section>
+<div class="hp3-stats">
+<div class="hp3-stat"><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i5"></use></svg></div><div><b>900.000đ</b><span>mức phí thấp nhất mỗi quý</span></div></div>
+<div class="hp3-stat"><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i4"></use></svg></div><div><b>13 bậc phí</b><span>theo số hóa đơn mỗi quý</span></div></div>
+<div class="hp3-stat"><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i8"></use></svg></div><div><b>Kế toán riêng</b><span>1 kế toán + 1 quản lý phụ trách</span></div></div>
+</div>
+
+<section class="hp3-sec" id="bang-gia">
+<span class="hp3-eye">Bảng giá</span>
+<h2>Bảng giá dịch vụ kế toán trọn gói theo quý</h2>
+<p class="hp3-sub">Bảng giá tại TP. Hồ Chí Minh: nhập số hóa đơn để tra phí tức thì, hoặc chọn lĩnh vực để xem toàn bộ các bậc phí.</p>
+<div class="hp3-pricebox">
+<div class="hp3-calc" id="hp3-calc">
+<div><label for="hp3-sector">Lĩnh vực</label><select id="hp3-sector"><option value="tm">Thương mại – Dịch vụ – Nhà hàng – Khách sạn</option><option value="sx">Sản xuất – Xây dựng – Công trình – Lắp đặt</option></select></div>
+<div><label for="hp3-count">Số hóa đơn / quý</label><input id="hp3-count" type="text" inputmode="numeric" placeholder="Ví dụ: 20" autocomplete="off"></div>
+<div class="hp3-out"><small>Phí dịch vụ</small><output id="hp3-result" aria-live="polite">Nhập số hóa đơn</output></div>
+</div>
+<div class="hp3-tabs">
+<input type="radio" name="hp3-sector-tab" id="hp3-s1" class="hp3-radio" checked>
+<input type="radio" name="hp3-sector-tab" id="hp3-s2" class="hp3-radio">
+<div class="hp3-tablist"><label for="hp3-s1">Thương mại – Dịch vụ<small>Nhà hàng – Khách sạn</small></label><label for="hp3-s2">Sản xuất – Xây dựng<small>Công trình – Lắp đặt</small></label></div>
+<div class="hp3-panel hp3-p1"><ul class="hp3-tiers" aria-label="Bảng giá dịch vụ kế toán trọn gói: Thương mại – Dịch vụ – Nhà hàng – Khách sạn (đồng/quý)"><li class="hp3-tier hp3-tier-top"><span class="hp3-tag">Mức phí thấp nhất</span><span class="rng">Không phát sinh hóa đơn trong quý</span><strong class="amt">900.000đ</strong><span class="per">mỗi quý</span></li><li class="hp3-tier"><span class="rng">1 – 5 hóa đơn</span><strong class="amt">1.000.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:12.8%"></i></span></li><li class="hp3-tier"><span class="rng">6 – 12 hóa đơn</span><strong class="amt">1.500.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:19.2%"></i></span></li><li class="hp3-tier"><span class="rng">13 – 25 hóa đơn</span><strong class="amt">2.000.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:25.6%"></i></span></li><li class="hp3-tier"><span class="rng">26 – 38 hóa đơn</span><strong class="amt">2.500.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:32.1%"></i></span></li><li class="hp3-tier"><span class="rng">39 – 50 hóa đơn</span><strong class="amt">3.000.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:38.5%"></i></span></li><li class="hp3-tier"><span class="rng">51 – 63 hóa đơn</span><strong class="amt">3.500.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:44.9%"></i></span></li><li class="hp3-tier"><span class="rng">64 – 75 hóa đơn</span><strong class="amt">4.000.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:51.3%"></i></span></li><li class="hp3-tier"><span class="rng">76 – 87 hóa đơn</span><strong class="amt">4.500.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:57.7%"></i></span></li><li class="hp3-tier"><span class="rng">88 – 100 hóa đơn</span><strong class="amt">5.000.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:64.1%"></i></span></li><li class="hp3-tier"><span class="rng">101 – 125 hóa đơn</span><strong class="amt">5.500.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:70.5%"></i></span></li><li class="hp3-tier"><span class="rng">126 – 153 hóa đơn</span><strong class="amt">6.000.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:76.9%"></i></span></li><li class="hp3-tier"><span class="rng">154 – 185 hóa đơn</span><strong class="amt">6.500.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:83.3%"></i></span></li><li class="hp3-tier hp3-tier-end"><span class="rng">Từ 186 tờ hóa đơn trở lên</span><strong class="amt">Phí thỏa thuận</strong><a class="hp3-mini" href="tel:0986883137">Gọi để báo giá</a></li></ul></div>
+<div class="hp3-panel hp3-p2"><ul class="hp3-tiers" aria-label="Bảng giá dịch vụ kế toán trọn gói: Sản xuất – Xây dựng – Công trình – Lắp đặt (đồng/quý)"><li class="hp3-tier hp3-tier-top"><span class="hp3-tag">Mức phí thấp nhất</span><span class="rng">Không phát sinh hóa đơn trong quý</span><strong class="amt">900.000đ</strong><span class="per">mỗi quý</span></li><li class="hp3-tier"><span class="rng">1 – 5 hóa đơn</span><strong class="amt">1.200.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:15.4%"></i></span></li><li class="hp3-tier"><span class="rng">6 – 12 hóa đơn</span><strong class="amt">1.800.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:23.1%"></i></span></li><li class="hp3-tier"><span class="rng">13 – 25 hóa đơn</span><strong class="amt">2.400.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:30.8%"></i></span></li><li class="hp3-tier"><span class="rng">26 – 38 hóa đơn</span><strong class="amt">3.000.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:38.5%"></i></span></li><li class="hp3-tier"><span class="rng">39 – 50 hóa đơn</span><strong class="amt">3.600.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:46.2%"></i></span></li><li class="hp3-tier"><span class="rng">51 – 63 hóa đơn</span><strong class="amt">4.200.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:53.8%"></i></span></li><li class="hp3-tier"><span class="rng">64 – 75 hóa đơn</span><strong class="amt">4.800.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:61.5%"></i></span></li><li class="hp3-tier"><span class="rng">76 – 87 hóa đơn</span><strong class="amt">5.400.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:69.2%"></i></span></li><li class="hp3-tier"><span class="rng">88 – 100 hóa đơn</span><strong class="amt">6.000.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:76.9%"></i></span></li><li class="hp3-tier"><span class="rng">101 – 125 hóa đơn</span><strong class="amt">6.600.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:84.6%"></i></span></li><li class="hp3-tier"><span class="rng">126 – 153 hóa đơn</span><strong class="amt">7.200.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:92.3%"></i></span></li><li class="hp3-tier"><span class="rng">154 – 185 hóa đơn</span><strong class="amt">7.800.000đ</strong><span class="per">mỗi quý</span><span class="bar"><i style="width:100.0%"></i></span></li><li class="hp3-tier hp3-tier-end"><span class="rng">Từ 186 tờ hóa đơn trở lên</span><strong class="amt">Phí thỏa thuận</strong><a class="hp3-mini" href="tel:0986883137">Gọi để báo giá</a></li></ul></div>
+</div>
+<p class="hp3-note">Đơn vị: đồng/quý. Trong bảng giá dịch vụ kế toán trọn gói, thanh màu thể hiện mức phí so với bậc cao nhất.</p>
+</div>
+<figure class="hp3-poster"><img src="https://dailythuehungphuc.com/wp-content/uploads/2026/11/bang-gia-dich-vu-ke-toan-tron-goi-tphcm.png" alt="Bảng giá dịch vụ kế toán trọn gói TP.HCM của Hưng Phúc theo số hóa đơn mỗi quý, từ 900.000đ/quý" width="1200" height="2086" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"><figcaption>Lưu hình bảng giá để gửi cho đồng nghiệp hoặc đối tác.</figcaption></figure>
+</section>
+
+<section class="hp3-sec" id="cong-viec">
+<span class="hp3-eye">Dịch vụ</span>
+<h2>Dịch vụ kế toán trọn gói gồm những gì?</h2>
+<p class="hp3-sub">Ba nhóm công việc, thực hiện xuyên suốt trong năm.</p>
+<div class="hp3-grid">
+<div class="hp3-card"><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i4"></use></svg></div><h3>Kê khai thuế hàng tháng</h3><ul><li>Lập và gửi hồ sơ, báo cáo thuế hàng tháng, hàng quý</li><li>Hướng dẫn viết hóa đơn, lập chứng từ</li><li>Phân loại chứng từ, in và hoàn chỉnh sổ sách</li><li>Làm việc với cơ quan thuế khi có yêu cầu</li><li>Đăng ký và xử lý BHXH</li><li>Tư vấn quy định thuế, lao động</li></ul></div>
+<div class="hp3-card"><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i5"></use></svg></div><h3>Nộp báo cáo quý</h3><ul><li>Báo cáo thuế GTGT</li><li>Báo cáo sử dụng hóa đơn</li><li>Báo cáo thuế TNCN tạm tính</li><li>Báo cáo tài chính cuối năm</li></ul></div>
+<div class="hp3-card"><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i6"></use></svg></div><h3>Quyết toán năm</h3><ul><li>Lập quyết toán thuế, báo cáo tài chính</li><li>Lập các báo cáo thống kê</li><li>Giải trình sổ sách khi thanh tra thuế</li><li>Đăng ký hồ sơ cho năm mới</li></ul></div>
+</div>
+<ul class="hp3-chips">
+<li><a href="https://dailythuehungphuc.com/dich-vu-quyet-toan-thue/">Dịch vụ quyết toán thuế</a></li>
+<li><a href="https://dailythuehungphuc.com/dich-vu-hoan-thue-vat/">Dịch vụ hoàn thuế VAT</a></li>
+<li><a href="https://dailythuehungphuc.com/dich-vu-ke-toan-truong/">Dịch vụ kế toán trưởng</a></li>
+<li><a href="https://dailythuehungphuc.com/dich-vu-ke-toan/">Chi tiết dịch vụ kế toán trọn gói</a></li>
+</ul>
+</section>
+
+<section class="hp3-sec" id="cam-ket">
+<span class="hp3-eye">Cam kết</span>
+<h2>5 cam kết của Hưng Phúc</h2>
+<div class="hp3-trust">
+<ul class="hp3-promise">
+<li><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i2"></use></svg></div><span>Luôn sẵn sàng tư vấn pháp lý, thuế cho doanh nghiệp.</span></li>
+<li><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i8"></use></svg></div><span>Một kế toán và một quản lý kế toán phụ trách sổ sách của công ty.</span></li>
+<li><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i7"></use></svg></div><span>Nếu Hưng Phúc làm sai dẫn đến bị phạt thuế, Hưng Phúc chịu trách nhiệm hoàn toàn.</span></li>
+<li><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i9"></use></svg></div><span>An toàn và bảo mật tuyệt đối số liệu của công ty.</span></li>
+<li><div class="hp3-ic"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i10"></use></svg></div><span>Ổn định, lâu dài, đồng hành cùng doanh nghiệp.</span></li>
+</ul>
+<div class="hp3-mosaic"><img src="https://dailythuehungphuc.com/wp-content/uploads/2021/05/d%E1%BB%8Bch-v%E1%BB%A5-k%E1%BA%BF-to%C3%A1n-h%C6%B0ng-ph%C3%BAc-01-1-1024x750.jpg" alt="Nhân viên kế toán Hưng Phúc kiểm tra hóa đơn, chứng từ tại bàn làm việc" width="1024" height="750" loading="lazy" decoding="async"><img src="https://dailythuehungphuc.com/wp-content/uploads/2021/05/dich-vu-ke-toan-tron-goi-2.jpg" alt="Nhân viên tư vấn Hưng Phúc tiếp nhận cuộc gọi của khách hàng tại văn phòng" width="600" height="523" loading="lazy" decoding="async"><img src="https://dailythuehungphuc.com/wp-content/uploads/2021/05/dich-vu-ke-toan-tron-goi-1-1.jpg" alt="Nhân viên kế toán trao đổi và làm việc trên máy tính tại văn phòng Hưng Phúc" width="600" height="523" loading="lazy" decoding="async"></div>
+</div>
+</section>
+
+<section class="hp3-sec" id="nhan-bao-gia">
+<span class="hp3-eye">Báo giá</span>
+<h2>Cách nhận báo giá dịch vụ kế toán trọn gói</h2>
+<ol class="hp3-steps">
+<li><b>Liên hệ</b>Gọi hotline, nhắn Zalo hoặc để lại số điện thoại.</li>
+<li><b>Cho biết thông tin</b>Lĩnh vực và số hóa đơn dự kiến mỗi quý.</li>
+<li><b>Nhận báo giá</b>Hưng Phúc tư vấn và báo giá phù hợp.</li>
+</ol>
+<ul class="hp3-chips hp3-chips-plain"><li>Công ty mới thành lập</li><li>Doanh nghiệp ít hóa đơn</li><li>Cần nộp thuế đúng hạn</li><li>Cần người làm việc với cơ quan thuế</li></ul>
+<p class="hp3-note">Muốn tự nộp tờ khai? Dùng <a href="https://thuedientu.gdt.gov.vn/" target="_blank" rel="noopener">cổng thuế điện tử của cơ quan thuế</a>. Tránh <a href="https://dailythuehungphuc.com/muc-phat-cham-nop-to-khai-thue/">mức phạt chậm nộp tờ khai thuế</a> bằng cách nộp đúng hạn.</p>
+</section>
+
+<section class="hp3-sec" id="hoi-dap">
+<span class="hp3-eye">Hỏi đáp</span>
+<h2>Câu hỏi thường gặp về bảng giá dịch vụ kế toán trọn gói</h2>
+<div class="hp3-faq">
+<details open><summary>Bảng giá dịch vụ kế toán trọn gói tính theo tiêu chí nào?</summary><p>Theo tổng số hóa đơn phát sinh trong quý và lĩnh vực hoạt động của doanh nghiệp. Mức phí tính theo quý.</p></details><details><summary>Doanh nghiệp không phát sinh hóa đơn có mức phí bao nhiêu?</summary><p>900.000đ/quý ở cả hai nhóm lĩnh vực.</p></details><details><summary>Từ 186 hóa đơn mỗi quý thì tính phí thế nào?</summary><p>Phí thỏa thuận theo tình hình thực tế. Gọi hoặc nhắn Zalo để nhận báo giá dịch vụ kế toán trọn gói.</p></details><details><summary>Chi phí dịch vụ kế toán trọn gói có tăng không?</summary><p>Hưng Phúc luôn cố gắng giữ bảng giá ổn định. Mức phí thay đổi theo bậc số hóa đơn phát sinh mỗi quý.</p></details><details><summary>Hưng Phúc có đến công ty kiểm tra hóa đơn chứng từ không?</summary><p>Có. Nhân viên đến công ty bạn hàng tháng, hàng quý để kiểm tra hóa đơn chứng từ và tư vấn.</p></details><details><summary>Có kế toán riêng phụ trách sổ sách của công ty tôi không?</summary><p>Hưng Phúc cam kết chỉ một kế toán và một quản lý kế toán phụ trách sổ sách của công ty bạn.</p></details><details><summary>Làm sao nhận báo giá dịch vụ kế toán trọn gói nhanh nhất?</summary><p>Gọi 098.688.3137 hoặc nhắn Zalo, cho biết lĩnh vực hoạt động và số hóa đơn dự kiến mỗi quý.</p></details>
+</div>
+</section>
+
+<section class="hp3-end" aria-label="Liên hệ nhận báo giá">
+<h2 id="tom-lai">Nhận báo giá dịch vụ kế toán trọn gói</h2>
+<p>Bảng giá dịch vụ kế toán trọn gói từ 900.000đ/quý. Liên hệ để nhận báo giá cho doanh nghiệp của bạn.</p>
+<div class="hp3-cta"><a class="hp3-btn hp3-call" href="tel:0986883137"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i1"></use></svg>Gọi 098.688.3137</a><a class="hp3-btn hp3-zalo" href="https://zalo.me/0986883137" target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#hp3-i2"></use></svg>Nhắn Zalo</a></div>
+<address><strong>Công ty TNHH Tư vấn và Dịch vụ Kế toán Hưng Phúc</strong><br>Trụ sở: 32/70 Lê Thị Hồng, Phường 17, Quận Gò Vấp, TP.HCM<br>Chi nhánh Bình Thạnh: 174/21 Điện Biên Phủ, Phường 17, Quận Bình Thạnh, TP.HCM<br><a href="mailto:dailythuehungphuc@gmail.com">dailythuehungphuc@gmail.com</a></address>
+</section>
+</div>
+<script>(function(){var D={"tm":[[0,0,900000],[1,5,1000000],[6,12,1500000],[13,25,2000000],[26,38,2500000],[39,50,3000000],[51,63,3500000],[64,75,4000000],[76,87,4500000],[88,100,5000000],[101,125,5500000],[126,153,6000000],[154,185,6500000]],"sx":[[0,0,900000],[1,5,1200000],[6,12,1800000],[13,25,2400000],[26,38,3000000],[39,50,3600000],[51,63,4200000],[64,75,4800000],[76,87,5400000],[88,100,6000000],[101,125,6600000],[126,153,7200000],[154,185,7800000]]};var s=document.getElementById('hp3-sector'),n=document.getElementById('hp3-count'),o=document.getElementById('hp3-result');if(!s||!n||!o)return;
+function f(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'đ/quý';}
+function u(){var raw=n.value.trim();if(raw===''||!/^\d+$/.test(raw)){o.textContent='Nhập số hóa đơn';return;}
+var c=parseInt(raw,10);if(c>=186){o.textContent='Phí thỏa thuận';return;}
+var t=D[s.value];for(var i=0;i<t.length;i++){if(c>=t[i][0]&&c<=t[i][1]){o.textContent=f(t[i][2]);return;}}o.textContent='Nhập số hóa đơn';}
+s.addEventListener('change',u);n.addEventListener('input',u);u();})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Bảng giá dịch vụ kế toán trọn gói tính theo tiêu chí nào?", "acceptedAnswer": {"@type": "Answer", "text": "Theo tổng số hóa đơn phát sinh trong quý và lĩnh vực hoạt động của doanh nghiệp. Mức phí tính theo quý."}}, {"@type": "Question", "name": "Doanh nghiệp không phát sinh hóa đơn có mức phí bao nhiêu?", "acceptedAnswer": {"@type": "Answer", "text": "900.000đ/quý ở cả hai nhóm lĩnh vực."}}, {"@type": "Question", "name": "Từ 186 hóa đơn mỗi quý thì tính phí thế nào?", "acceptedAnswer": {"@type": "Answer", "text": "Phí thỏa thuận theo tình hình thực tế. Gọi hoặc nhắn Zalo để nhận báo giá dịch vụ kế toán trọn gói."}}, {"@type": "Question", "name": "Chi phí dịch vụ kế toán trọn gói có tăng không?", "acceptedAnswer": {"@type": "Answer", "text": "Hưng Phúc luôn cố gắng giữ bảng giá ổn định. Mức phí thay đổi theo bậc số hóa đơn phát sinh mỗi quý."}}, {"@type": "Question", "name": "Hưng Phúc có đến công ty kiểm tra hóa đơn chứng từ không?", "acceptedAnswer": {"@type": "Answer", "text": "Có. Nhân viên đến công ty bạn hàng tháng, hàng quý để kiểm tra hóa đơn chứng từ và tư vấn."}}, {"@type": "Question", "name": "Có kế toán riêng phụ trách sổ sách của công ty tôi không?", "acceptedAnswer": {"@type": "Answer", "text": "Hưng Phúc cam kết chỉ một kế toán và một quản lý kế toán phụ trách sổ sách của công ty bạn."}}, {"@type": "Question", "name": "Làm sao nhận báo giá dịch vụ kế toán trọn gói nhanh nhất?", "acceptedAnswer": {"@type": "Answer", "text": "Gọi 098.688.3137 hoặc nhắn Zalo, cho biết lĩnh vực hoạt động và số hóa đơn dự kiến mỗi quý."}}]}</script>

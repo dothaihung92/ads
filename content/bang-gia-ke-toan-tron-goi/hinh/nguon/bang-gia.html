@@ -1,32 +1,34 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><title>Bảng giá dịch vụ kế toán trọn gói TP.HCM</title><style>
-:root{--navy:#0e2a47;--navy2:#143d66;--blue:#1b5faa;--accent:#f59e0b;--bg:#f4f7fb;--line:#dbe3ee;--text:#1f2937;--muted:#5b6675}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter','DejaVu Sans',Arial,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
-
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><style>:root{--navy:#0a1f44;--blue:#2563eb;--cyan:#06b6d4;--orange:#ff8a00;--amber:#ffb000;--bg:#eef4ff;--line:#dbe6ff;--muted:#5b6b86;--ink:#0f172a}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter','DejaVu Sans',Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
 body{width:1200px;background:#fff}
-.hd{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:54px 64px 44px;position:relative;overflow:hidden}
-.hd:after{content:"";position:absolute;right:-90px;top:-90px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.06)}
-.kicker{font-size:20px;font-weight:700;letter-spacing:.14em;color:#ffd58a;text-transform:uppercase}
-h1{font-size:56px;line-height:1.12;margin:14px 0 14px;font-weight:800;max-width:900px}
-.sub{font-size:24px;color:#dbe7f5;max-width:880px;line-height:1.4}
-.badge{display:inline-block;margin-top:26px;background:var(--accent);color:#1f1300;font-weight:800;font-size:26px;padding:12px 24px;border-radius:999px}
-.wrap{padding:40px 64px 8px}
-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:25px}
-thead th{background:var(--navy);color:#fff;padding:20px 18px;font-size:21px;line-height:1.3;font-weight:700;text-align:center}
-thead th:first-child{text-align:left;width:34%}
-tbody th{text-align:left;font-weight:600;padding:17px 18px;background:var(--bg);border-top:1px solid var(--line)}
-tbody td{text-align:center;padding:17px 18px;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;font-weight:600}
-tbody tr:nth-child(even) td{background:#fafcff}
-tr.low th,tr.low td{background:#fff4dc} tr.neg th,tr.neg td{background:#e6f0ff;font-weight:800;color:var(--navy)}
-.unit{margin:18px 4px 0;font-size:20px;color:var(--muted)}
-.ft{margin:34px 0 0;background:var(--bg);border-top:4px solid var(--accent);padding:30px 64px 34px;display:flex;justify-content:space-between;align-items:center;gap:30px}
-.ft .co{font-size:22px;font-weight:700;color:var(--navy);line-height:1.35} .ft .co small{display:block;font-weight:500;color:var(--muted);font-size:19px;margin-top:6px}
-.ft .tel{background:var(--navy);color:#fff;border-radius:14px;padding:16px 26px;text-align:center;white-space:nowrap}
-.ft .tel span{display:block;font-size:18px;color:#ffd58a;font-weight:700;letter-spacing:.06em} .ft .tel b{font-size:34px;letter-spacing:.02em}
+.hd{position:relative;overflow:hidden;background:radial-gradient(700px 380px at 95% -10%,#3b82f6 0%,transparent 60%),radial-gradient(520px 320px at -5% 110%,#06b6d4 0%,transparent 55%),linear-gradient(135deg,#071a3d,#0b2d6b);color:#fff;padding:56px 64px 50px}
+.hd:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:40px 40px;-webkit-mask-image:linear-gradient(110deg,#000,transparent 70%)}
+.hd>*{position:relative}
+.kicker{display:inline-block;font-size:19px;font-weight:800;letter-spacing:.14em;color:#ffd24d;text-transform:uppercase;background:rgba(255,176,0,.16);border:1px solid rgba(255,176,0,.5);padding:8px 18px;border-radius:999px}
+h1{font-size:62px;line-height:1.08;margin:22px 0 14px;font-weight:900;letter-spacing:-.02em;max-width:980px}
+.sub{font-size:25px;color:#cfe0fb;max-width:900px;line-height:1.4}
+.big{display:flex;align-items:baseline;gap:14px;margin-top:26px}.big small{font-size:24px;color:#bcd2f5;font-weight:700}.big b{font-size:104px;line-height:1;font-weight:900;letter-spacing:-.03em;background:linear-gradient(180deg,#fff 10%,#ffd24d 95%);-webkit-background-clip:text;color:transparent}.big span{font-size:30px;color:#bcd2f5;font-weight:700}
+.wrap{padding:42px 64px 0}
+.cols{display:grid;grid-template-columns:30% 1fr 1fr;gap:0;margin-bottom:12px;align-items:end}
+.cols div{text-align:center;font-size:19px;font-weight:800;line-height:1.3;color:#fff;padding:18px 14px;border-radius:16px 16px 0 0}
+.cols .c0{background:transparent}.cols .c1{background:linear-gradient(135deg,#2563eb,#1d4ed8)}.cols .c2{background:linear-gradient(135deg,#06b6d4,#0891b2);margin-left:8px}.cols .c1{margin-left:8px}
+table{width:100%;border-collapse:separate;border-spacing:0 8px;font-size:25px}
+th{text-align:left;font-weight:700;padding:16px 20px;background:var(--bg);border-radius:14px 0 0 14px;width:30%;color:var(--navy)}
+td{padding:12px 20px;background:#fff;border:1px solid var(--line);border-left:0;border-right:0;vertical-align:middle}td:last-child{border-right:1px solid var(--line);border-radius:0 14px 14px 0}td+td{border-left:1px solid var(--line)}
+td b{display:block;font-size:30px;font-weight:900;color:var(--navy);letter-spacing:-.01em}
+.bar{display:block;height:8px;border-radius:8px;background:#e6eeff;margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,#06b6d4,#2563eb)}
+tr.low th{background:linear-gradient(135deg,#ffb000,#ff8a00);color:#2a1700;font-weight:900}tr.low td{background:#fff4dc;border-color:#ffd9a0}tr.low td b{color:#7a3d00}
+tr.end th{background:var(--navy);color:#fff}tr.end td{background:linear-gradient(135deg,#0a1f44,#12408a);color:#ffd24d;font-weight:900;font-size:32px;text-align:center;border:0}
+.unit{margin:14px 6px 0;font-size:20px;color:var(--muted)}
+.ft{margin:30px 0 0;background:var(--bg);border-top:6px solid var(--amber);padding:32px 64px 36px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.ft .co{font-size:23px;font-weight:800;color:var(--navy);line-height:1.35}.ft .co small{display:block;font-weight:500;color:var(--muted);font-size:19px;margin-top:6px}
+.ft .tel{background:linear-gradient(135deg,#ffb000,#ff8a00);color:#2a1700;border-radius:18px;padding:16px 30px;text-align:center;white-space:nowrap;box-shadow:0 18px 26px -12px rgba(255,138,0,.7)}
+.ft .tel span{display:block;font-size:17px;font-weight:800;letter-spacing:.08em}.ft .tel b{font-size:40px;font-weight:900;letter-spacing:.01em}
 </style></head><body>
-<div class="hd"><div class="kicker">Hưng Phúc · Dịch vụ kế toán</div><h1>Bảng giá dịch vụ kế toán trọn gói tại TP.HCM</h1>
-<div class="sub">Phí tính theo tổng số hóa đơn phát sinh trong quý và lĩnh vực hoạt động của doanh nghiệp</div><div class="badge">Từ 900.000đ / quý</div></div>
-<div class="wrap"><table><thead><tr><th>Tổng số hóa đơn phát sinh trong quý</th><th>Thương mại – Dịch vụ<br>Nhà hàng – Khách sạn</th><th>Sản xuất – Xây dựng<br>Công trình – Lắp đặt</th></tr></thead><tbody><tr class="low"><th>Không phát sinh hóa đơn</th><td>900.000đ</td><td>900.000đ</td></tr><tr class=""><th>Từ 1 – 5 tờ hóa đơn</th><td>1.000.000đ</td><td>1.200.000đ</td></tr><tr class=""><th>Từ 6 – 12 tờ hóa đơn</th><td>1.500.000đ</td><td>1.800.000đ</td></tr><tr class=""><th>Từ 13 – 25 tờ hóa đơn</th><td>2.000.000đ</td><td>2.400.000đ</td></tr><tr class=""><th>Từ 26 – 38 tờ hóa đơn</th><td>2.500.000đ</td><td>3.000.000đ</td></tr><tr class=""><th>Từ 39 – 50 tờ hóa đơn</th><td>3.000.000đ</td><td>3.600.000đ</td></tr><tr class=""><th>Từ 51 – 63 tờ hóa đơn</th><td>3.500.000đ</td><td>4.200.000đ</td></tr><tr class=""><th>Từ 64 – 75 tờ hóa đơn</th><td>4.000.000đ</td><td>4.800.000đ</td></tr><tr class=""><th>Từ 76 – 87 tờ hóa đơn</th><td>4.500.000đ</td><td>5.400.000đ</td></tr><tr class=""><th>Từ 88 – 100 tờ hóa đơn</th><td>5.000.000đ</td><td>6.000.000đ</td></tr><tr class=""><th>Từ 101 – 125 tờ hóa đơn</th><td>5.500.000đ</td><td>6.600.000đ</td></tr><tr class=""><th>Từ 126 – 153 tờ hóa đơn</th><td>6.000.000đ</td><td>7.200.000đ</td></tr><tr class=""><th>Từ 154 – 185 tờ hóa đơn</th><td>6.500.000đ</td><td>7.800.000đ</td></tr><tr class="neg"><th>Từ 186 tờ hóa đơn trở lên</th><td colspan="2">Phí thỏa thuận</td></tr></tbody></table>
-<div class="unit">Đơn vị: đồng/quý · Bảng giá cập nhật tháng 11/2026</div></div>
+<div class="hd"><span class="kicker">Hưng Phúc · TP. Hồ Chí Minh</span><h1>Bảng giá dịch vụ kế toán trọn gói</h1>
+<div class="sub">Phí tính theo tổng số hóa đơn phát sinh trong quý và lĩnh vực hoạt động của doanh nghiệp</div>
+<div class="big"><small>Từ</small><b>900.000đ</b><span>/ quý</span></div></div>
+<div class="wrap"><div class="cols"><div class="c0"></div><div class="c1">Thương mại – Dịch vụ<br>Nhà hàng – Khách sạn</div><div class="c2">Sản xuất – Xây dựng<br>Công trình – Lắp đặt</div></div>
+<table><tbody><tr class="low"><th>Không phát sinh hóa đơn</th><td><b>900.000đ</b><span class="bar"><i style="width:11.5%"></i></span></td><td><b>900.000đ</b><span class="bar"><i style="width:11.5%"></i></span></td></tr><tr class=""><th>Từ 1 – 5 tờ hóa đơn</th><td><b>1.000.000đ</b><span class="bar"><i style="width:12.8%"></i></span></td><td><b>1.200.000đ</b><span class="bar"><i style="width:15.4%"></i></span></td></tr><tr class=""><th>Từ 6 – 12 tờ hóa đơn</th><td><b>1.500.000đ</b><span class="bar"><i style="width:19.2%"></i></span></td><td><b>1.800.000đ</b><span class="bar"><i style="width:23.1%"></i></span></td></tr><tr class=""><th>Từ 13 – 25 tờ hóa đơn</th><td><b>2.000.000đ</b><span class="bar"><i style="width:25.6%"></i></span></td><td><b>2.400.000đ</b><span class="bar"><i style="width:30.8%"></i></span></td></tr><tr class=""><th>Từ 26 – 38 tờ hóa đơn</th><td><b>2.500.000đ</b><span class="bar"><i style="width:32.1%"></i></span></td><td><b>3.000.000đ</b><span class="bar"><i style="width:38.5%"></i></span></td></tr><tr class=""><th>Từ 39 – 50 tờ hóa đơn</th><td><b>3.000.000đ</b><span class="bar"><i style="width:38.5%"></i></span></td><td><b>3.600.000đ</b><span class="bar"><i style="width:46.2%"></i></span></td></tr><tr class=""><th>Từ 51 – 63 tờ hóa đơn</th><td><b>3.500.000đ</b><span class="bar"><i style="width:44.9%"></i></span></td><td><b>4.200.000đ</b><span class="bar"><i style="width:53.8%"></i></span></td></tr><tr class=""><th>Từ 64 – 75 tờ hóa đơn</th><td><b>4.000.000đ</b><span class="bar"><i style="width:51.3%"></i></span></td><td><b>4.800.000đ</b><span class="bar"><i style="width:61.5%"></i></span></td></tr><tr class=""><th>Từ 76 – 87 tờ hóa đơn</th><td><b>4.500.000đ</b><span class="bar"><i style="width:57.7%"></i></span></td><td><b>5.400.000đ</b><span class="bar"><i style="width:69.2%"></i></span></td></tr><tr class=""><th>Từ 88 – 100 tờ hóa đơn</th><td><b>5.000.000đ</b><span class="bar"><i style="width:64.1%"></i></span></td><td><b>6.000.000đ</b><span class="bar"><i style="width:76.9%"></i></span></td></tr><tr class=""><th>Từ 101 – 125 tờ hóa đơn</th><td><b>5.500.000đ</b><span class="bar"><i style="width:70.5%"></i></span></td><td><b>6.600.000đ</b><span class="bar"><i style="width:84.6%"></i></span></td></tr><tr class=""><th>Từ 126 – 153 tờ hóa đơn</th><td><b>6.000.000đ</b><span class="bar"><i style="width:76.9%"></i></span></td><td><b>7.200.000đ</b><span class="bar"><i style="width:92.3%"></i></span></td></tr><tr class=""><th>Từ 154 – 185 tờ hóa đơn</th><td><b>6.500.000đ</b><span class="bar"><i style="width:83.3%"></i></span></td><td><b>7.800.000đ</b><span class="bar"><i style="width:100.0%"></i></span></td></tr><tr class="end"><th>Từ 186 tờ hóa đơn trở lên</th><td colspan="2">Phí thỏa thuận</td></tr></tbody></table><div class="unit">Đơn vị: đồng/quý · Bảng giá cập nhật tháng 11/2026</div></div>
 <div class="ft"><div class="co">Công ty TNHH Tư vấn và Dịch vụ Kế toán Hưng Phúc<small>Gọi hoặc nhắn Zalo để nhận báo giá cho doanh nghiệp của bạn</small></div><div class="tel"><span>HOTLINE / ZALO</span><b>098.688.3137</b></div></div>
 </body></html>
