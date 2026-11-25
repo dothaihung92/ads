@@ -1,0 +1,175 @@
+<style>
+.hp2{--navy:#0b2545;--blue:#1d5fc4;--sky:#eef4ff;--amber:#f59e0b;--ink:#1b2430;--muted:#5d6b7c;--line:#e3e9f2;color:var(--ink);font-size:17px;line-height:1.65}
+.hp2 *{box-sizing:border-box}
+.hp2 a{color:var(--blue)}
+.hp2 h2{font-size:1.7em;line-height:1.25;color:var(--navy);margin:2.3em 0 .35em;letter-spacing:-.01em}
+.hp2 h3{font-size:1.1em;color:var(--navy);margin:0 0 .6em;line-height:1.35}
+.hp2 .hp2-sub{color:var(--muted);margin:0 0 1.1em}
+.hp2 svg{flex:0 0 auto}
+.hp2-hero{display:grid;grid-template-columns:1.2fr .8fr;border-radius:22px;overflow:hidden;background:linear-gradient(135deg,var(--navy),#16438a);color:#fff;margin:0 0 20px;box-shadow:0 18px 40px rgba(11,37,69,.18)}
+.hp2-body{padding:38px 38px 34px}
+.hp2-eyebrow{font-size:.78em;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#ffd58a;margin:0 0 10px}
+.hp2-price{font-size:3.1em;font-weight:800;line-height:1.05;margin:0 0 8px;letter-spacing:-.02em}
+.hp2-price small{font-size:.36em;font-weight:600;color:#cfe0f7;margin-left:6px;letter-spacing:0;white-space:nowrap}
+.hp2-lead{color:#dbe7f7;margin:0 0 18px;font-size:1.05em}
+.hp2-checks{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:9px}
+.hp2-checks li{display:flex;gap:10px;align-items:flex-start;font-size:.95em;margin:0}
+.hp2-checks svg{color:#ffd58a;margin-top:3px}
+.hp2-photo{position:relative;min-height:280px}.hp2-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hp2-cta{display:flex;gap:10px;flex-wrap:wrap}
+.hp2 a.hp2-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:700;text-decoration:none;line-height:1.1;transition:transform .15s,box-shadow .15s}
+.hp2 a.hp2-btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.hp2 a.hp2-call{background:var(--amber);color:#201400}
+.hp2 a.hp2-zalo{background:#fff;color:var(--navy)}
+.hp2-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 6px}
+.hp2-stat{background:var(--sky);border:1px solid var(--line);border-radius:16px;padding:16px 18px;text-align:center}
+.hp2-stat b{display:block;font-size:1.5em;color:var(--navy);line-height:1.15}.hp2-stat span{font-size:.88em;color:var(--muted)}
+.hp2-calc{display:grid;grid-template-columns:1.5fr .8fr 1fr;gap:14px;align-items:end;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:0 10px 26px rgba(11,37,69,.07);margin:16px 0}
+.hp2-calc label{display:block;font-size:.82em;font-weight:700;color:var(--muted);margin:0 0 6px;text-transform:uppercase;letter-spacing:.05em}
+.hp2-calc select,.hp2-calc input{width:100%;height:48px;border:1px solid #cfd9e8;border-radius:12px;padding:0 12px;font-size:1em;background:#fff;color:var(--ink)}
+.hp2-calc select:focus,.hp2-calc input:focus{outline:2px solid var(--blue);outline-offset:1px}
+.hp2-out{background:var(--navy);color:#fff;border-radius:14px;padding:10px 16px;min-height:48px;display:flex;flex-direction:column;justify-content:center}
+.hp2-out small{font-size:.74em;color:#9fb6d6;text-transform:uppercase;letter-spacing:.06em}.hp2-out output{font-size:1.35em;font-weight:800;line-height:1.2}
+.hp2-tabs{margin:18px 0 6px}
+.hp2-radio{position:absolute;opacity:0;pointer-events:none}
+.hp2-tablist{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 12px}
+.hp2-tablist label{display:block;text-align:center;padding:12px 10px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;font-weight:700;color:var(--navy);line-height:1.3}
+.hp2-tablist label small{display:block;font-weight:500;color:var(--muted)}
+#hp2-s1:checked~.hp2-tablist label[for=hp2-s1],#hp2-s2:checked~.hp2-tablist label[for=hp2-s2]{background:var(--navy);color:#fff;border-color:var(--navy)}
+#hp2-s1:checked~.hp2-tablist label[for=hp2-s1] small,#hp2-s2:checked~.hp2-tablist label[for=hp2-s2] small{color:#c6d7ee}
+#hp2-s1:focus-visible~.hp2-tablist label[for=hp2-s1],#hp2-s2:focus-visible~.hp2-tablist label[for=hp2-s2]{outline:3px solid var(--amber);outline-offset:2px}
+.hp2-panel{display:none;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+#hp2-s1:checked~.hp2-p1,#hp2-s2:checked~.hp2-p2{display:block}
+.hp2 table.hp2-table{width:100%;border-collapse:collapse;margin:0;font-size:.98em}
+.hp2-table caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hp2 .hp2-table thead th{background:var(--sky);color:var(--navy);text-align:left;padding:13px 18px;border:0;font-size:.85em;text-transform:uppercase;letter-spacing:.05em}
+.hp2 .hp2-table thead th:last-child,.hp2 .hp2-table td{text-align:right}
+.hp2 .hp2-table tbody th{text-align:left;font-weight:600;padding:12px 18px;border:0;border-top:1px solid var(--line);background:#fff}
+.hp2 .hp2-table td{padding:12px 18px;border:0;border-top:1px solid var(--line);font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums;background:#fff}
+.hp2 .hp2-table tr.hp2-low th,.hp2 .hp2-table tr.hp2-low td{background:#fff7e6}
+.hp2 .hp2-table tr.hp2-neg th,.hp2 .hp2-table tr.hp2-neg td{background:var(--sky)}
+.hp2-note{font-size:.88em;color:var(--muted);margin:8px 4px 0}
+.hp2-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.hp2-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 22px rgba(11,37,69,.05)}
+.hp2-ico{width:44px;height:44px;border-radius:12px;background:var(--sky);color:var(--blue);display:flex;align-items:center;justify-content:center;margin:0 0 12px}
+.hp2-card ul{margin:0;padding-left:18px}.hp2-card li{margin:6px 0;font-size:.95em}
+.hp2-promise{list-style:none;margin:12px 0;padding:0;display:grid;gap:10px}
+.hp2-promise li{display:flex;gap:12px;align-items:flex-start;background:var(--sky);border-radius:14px;padding:14px 16px;margin:0}
+.hp2-promise svg{color:var(--blue);margin-top:2px}
+.hp2-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0;counter-reset:s;list-style:none;padding:0}
+.hp2-steps li{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;margin:0}
+.hp2-steps li:before{content:counter(s);display:flex;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;align-items:center;justify-content:center;margin:0 0 10px}
+.hp2-steps b{display:block;color:var(--navy)}
+.hp2-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.hp2-gallery img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+.hp2-chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 10px;padding:0;list-style:none}
+.hp2-chips li{margin:0;background:var(--sky);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.92em;color:var(--navy)}
+.hp2-faq details{border:1px solid var(--line);border-radius:14px;margin:0 0 10px;background:#fff;overflow:hidden}
+.hp2-faq summary{cursor:pointer;padding:15px 18px;font-weight:700;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:12px}
+.hp2-faq summary::-webkit-details-marker{display:none}
+.hp2-faq summary:after{content:"+";font-size:1.3em;line-height:1;color:var(--blue)}
+.hp2-faq details[open] summary:after{content:"–"}
+.hp2-faq details p{margin:0;padding:0 18px 16px;color:#33404f}
+.hp2-end{background:linear-gradient(135deg,var(--navy),#16438a);color:#fff;border-radius:22px;padding:34px;margin:34px 0 0;text-align:center}
+.hp2 .hp2-end h2{color:#fff;margin:0 0 6px}.hp2-end p{margin:0 0 6px;color:#dbe7f7}
+.hp2-end .hp2-cta{justify-content:center;margin:18px 0}
+.hp2-end address{font-style:normal;font-size:.88em;color:#b9cbe6;line-height:1.6}.hp2 .hp2-end a:not(.hp2-btn){color:#fff}
+@media(max-width:820px){
+.hp2{font-size:16px}.hp2-hero{grid-template-columns:1fr}.hp2-photo{display:none}.hp2-body{padding:26px 22px}
+.hp2-price{font-size:2.15em}.hp2 a.hp2-btn{width:100%}
+.hp2-grid,.hp2-steps{grid-template-columns:1fr}.hp2-calc{grid-template-columns:1fr}.hp2-gallery{grid-template-columns:repeat(2,1fr)}
+.hp2-stat{padding:12px 8px}.hp2-stat b{font-size:1.1em}.hp2-stat span{font-size:.76em}.hp2-end{padding:26px 20px}}
+</style>
+<div class="hp2">
+<section class="hp2-hero">
+<div class="hp2-body">
+<p class="hp2-eyebrow">Hưng Phúc · TP. Hồ Chí Minh</p>
+<p class="hp2-price">Từ 900.000đ<small>/ quý</small></p>
+<p class="hp2-lead">Bảng giá dịch vụ kế toán trọn gói tại TP.HCM: phí tính theo số hóa đơn phát sinh mỗi quý.</p>
+<ul class="hp2-checks">
+<li><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Kê khai thuế hàng tháng, nộp báo cáo quý, quyết toán năm</span></li>
+<li><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Một kế toán và một quản lý kế toán phụ trách sổ sách</span></li>
+<li><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Gọi hoặc nhắn Zalo để nhận báo giá cho doanh nghiệp</span></li>
+</ul>
+<div class="hp2-cta"><a class="hp2-btn hp2-call" href="tel:0986883137"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Gọi 098.688.3137</a><a class="hp2-btn hp2-zalo" href="https://zalo.me/0986883137" target="_blank" rel="noopener"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Nhắn Zalo</a></div>
+</div>
+<div class="hp2-photo"><img src="https://dailythuehungphuc.com/wp-content/uploads/2021/05/d%E1%BB%8Bch-v%E1%BB%A5-k%E1%BA%BF-to%C3%A1n-h%C6%B0ng-ph%C3%BAc-1-1024x750.jpg" alt="Văn phòng kế toán với tủ hồ sơ và nhân viên đang làm việc, dịch vụ kế toán trọn gói Hưng Phúc" width="1024" height="750" loading="lazy" decoding="async"></div>
+</section>
+
+<div class="hp2-stats">
+<div class="hp2-stat"><b>900.000đ</b><span>mức phí thấp nhất mỗi quý</span></div>
+<div class="hp2-stat"><b>13 bậc</b><span>phí theo số hóa đơn</span></div>
+<div class="hp2-stat"><b>2 nhóm</b><span>lĩnh vực hoạt động</span></div>
+</div>
+
+<h2 id="bang-gia">Bảng giá dịch vụ kế toán trọn gói theo quý</h2>
+<p class="hp2-sub">Chọn lĩnh vực và nhập số hóa đơn mỗi quý để tra phí nhanh, hoặc xem bảng đầy đủ bên dưới.</p>
+
+<div class="hp2-calc" id="hp2-calc">
+<div><label for="hp2-sector">Lĩnh vực</label><select id="hp2-sector"><option value="tm">Thương mại – Dịch vụ – Nhà hàng – Khách sạn</option><option value="sx">Sản xuất – Xây dựng – Công trình – Lắp đặt</option></select></div>
+<div><label for="hp2-count">Số hóa đơn / quý</label><input id="hp2-count" type="text" inputmode="numeric" placeholder="Ví dụ: 20" autocomplete="off"></div>
+<div class="hp2-out"><small>Phí dịch vụ</small><output id="hp2-result" aria-live="polite">Nhập số hóa đơn</output></div>
+</div>
+
+<div class="hp2-tabs">
+<input type="radio" name="hp2-sector-tab" id="hp2-s1" class="hp2-radio" checked>
+<input type="radio" name="hp2-sector-tab" id="hp2-s2" class="hp2-radio">
+<div class="hp2-tablist"><label for="hp2-s1">Thương mại – Dịch vụ<small>Nhà hàng – Khách sạn</small></label><label for="hp2-s2">Sản xuất – Xây dựng<small>Công trình – Lắp đặt</small></label></div>
+<div class="hp2-panel hp2-p1"><table class="hp2-table"><caption>Bảng giá dịch vụ kế toán trọn gói: Thương mại – Dịch vụ – Nhà hàng – Khách sạn (đồng/quý)</caption><thead><tr><th scope="col">Tổng số hóa đơn phát sinh trong quý</th><th scope="col">Phí mỗi quý</th></tr></thead><tbody><tr class="hp2-low"><th scope="row">Không phát sinh hóa đơn</th><td>900.000đ</td></tr><tr><th scope="row">Từ 1 – 5 tờ hóa đơn</th><td>1.000.000đ</td></tr><tr><th scope="row">Từ 6 – 12 tờ hóa đơn</th><td>1.500.000đ</td></tr><tr><th scope="row">Từ 13 – 25 tờ hóa đơn</th><td>2.000.000đ</td></tr><tr><th scope="row">Từ 26 – 38 tờ hóa đơn</th><td>2.500.000đ</td></tr><tr><th scope="row">Từ 39 – 50 tờ hóa đơn</th><td>3.000.000đ</td></tr><tr><th scope="row">Từ 51 – 63 tờ hóa đơn</th><td>3.500.000đ</td></tr><tr><th scope="row">Từ 64 – 75 tờ hóa đơn</th><td>4.000.000đ</td></tr><tr><th scope="row">Từ 76 – 87 tờ hóa đơn</th><td>4.500.000đ</td></tr><tr><th scope="row">Từ 88 – 100 tờ hóa đơn</th><td>5.000.000đ</td></tr><tr><th scope="row">Từ 101 – 125 tờ hóa đơn</th><td>5.500.000đ</td></tr><tr><th scope="row">Từ 126 – 153 tờ hóa đơn</th><td>6.000.000đ</td></tr><tr><th scope="row">Từ 154 – 185 tờ hóa đơn</th><td>6.500.000đ</td></tr><tr class="hp2-neg"><th scope="row">Từ 186 tờ hóa đơn trở lên</th><td>Phí thỏa thuận</td></tr></tbody></table></div>
+<div class="hp2-panel hp2-p2"><table class="hp2-table"><caption>Bảng giá dịch vụ kế toán trọn gói: Sản xuất – Xây dựng – Công trình – Lắp đặt (đồng/quý)</caption><thead><tr><th scope="col">Tổng số hóa đơn phát sinh trong quý</th><th scope="col">Phí mỗi quý</th></tr></thead><tbody><tr class="hp2-low"><th scope="row">Không phát sinh hóa đơn</th><td>900.000đ</td></tr><tr><th scope="row">Từ 1 – 5 tờ hóa đơn</th><td>1.200.000đ</td></tr><tr><th scope="row">Từ 6 – 12 tờ hóa đơn</th><td>1.800.000đ</td></tr><tr><th scope="row">Từ 13 – 25 tờ hóa đơn</th><td>2.400.000đ</td></tr><tr><th scope="row">Từ 26 – 38 tờ hóa đơn</th><td>3.000.000đ</td></tr><tr><th scope="row">Từ 39 – 50 tờ hóa đơn</th><td>3.600.000đ</td></tr><tr><th scope="row">Từ 51 – 63 tờ hóa đơn</th><td>4.200.000đ</td></tr><tr><th scope="row">Từ 64 – 75 tờ hóa đơn</th><td>4.800.000đ</td></tr><tr><th scope="row">Từ 76 – 87 tờ hóa đơn</th><td>5.400.000đ</td></tr><tr><th scope="row">Từ 88 – 100 tờ hóa đơn</th><td>6.000.000đ</td></tr><tr><th scope="row">Từ 101 – 125 tờ hóa đơn</th><td>6.600.000đ</td></tr><tr><th scope="row">Từ 126 – 153 tờ hóa đơn</th><td>7.200.000đ</td></tr><tr><th scope="row">Từ 154 – 185 tờ hóa đơn</th><td>7.800.000đ</td></tr><tr class="hp2-neg"><th scope="row">Từ 186 tờ hóa đơn trở lên</th><td>Phí thỏa thuận</td></tr></tbody></table></div>
+</div>
+<p class="hp2-note">Đơn vị: đồng/quý. Bảng giá cập nhật tháng 11/2026.</p>
+
+<h2 id="cong-viec">Dịch vụ kế toán trọn gói gồm những gì?</h2>
+<div class="hp2-grid">
+<div class="hp2-card"><div class="hp2-ico"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3>Kê khai thuế hàng tháng</h3><ul><li>Lập và gửi hồ sơ, báo cáo thuế hàng tháng, hàng quý</li><li>Hướng dẫn viết hóa đơn, lập chứng từ</li><li>Phân loại chứng từ, in và hoàn chỉnh sổ sách</li><li>Làm việc với cơ quan thuế khi có yêu cầu</li><li>Đăng ký và xử lý BHXH</li><li>Tư vấn quy định thuế, lao động</li></ul></div>
+<div class="hp2-card"><div class="hp2-ico"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg></div><h3>Nộp báo cáo quý</h3><ul><li>Báo cáo thuế GTGT</li><li>Báo cáo sử dụng hóa đơn</li><li>Báo cáo thuế TNCN tạm tính</li><li>Báo cáo tài chính cuối năm</li></ul></div>
+<div class="hp2-card"><div class="hp2-ico"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div><h3>Quyết toán năm</h3><ul><li>Lập quyết toán thuế, báo cáo tài chính</li><li>Lập các báo cáo thống kê</li><li>Giải trình sổ sách khi thanh tra thuế</li><li>Đăng ký hồ sơ cho năm mới</li></ul></div>
+</div>
+<ul class="hp2-chips">
+<li><a href="https://dailythuehungphuc.com/dich-vu-quyet-toan-thue/">Dịch vụ quyết toán thuế</a></li>
+<li><a href="https://dailythuehungphuc.com/dich-vu-hoan-thue-vat/">Dịch vụ hoàn thuế VAT</a></li>
+<li><a href="https://dailythuehungphuc.com/dich-vu-ke-toan-truong/">Dịch vụ kế toán trưởng</a></li>
+<li><a href="https://dailythuehungphuc.com/dich-vu-ke-toan/">Chi tiết dịch vụ kế toán trọn gói</a></li>
+</ul>
+
+<h2 id="cam-ket">5 cam kết của Hưng Phúc</h2>
+<ul class="hp2-promise">
+<li><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Luôn sẵn sàng tư vấn pháp lý, thuế cho doanh nghiệp.</span></li>
+<li><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Một kế toán và một quản lý kế toán phụ trách sổ sách của công ty.</span></li>
+<li><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Nếu Hưng Phúc làm sai dẫn đến bị phạt thuế, Hưng Phúc chịu trách nhiệm hoàn toàn.</span></li>
+<li><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>An toàn và bảo mật tuyệt đối số liệu của công ty.</span></li>
+<li><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Ổn định, lâu dài, đồng hành cùng doanh nghiệp.</span></li>
+</ul>
+<div class="hp2-gallery"><img src="https://dailythuehungphuc.com/wp-content/uploads/2021/05/d%E1%BB%8Bch-v%E1%BB%A5-k%E1%BA%BF-to%C3%A1n-h%C6%B0ng-ph%C3%BAc-1-1024x750.jpg" alt="Văn phòng kế toán với tủ hồ sơ và nhân viên đang làm việc, dịch vụ kế toán trọn gói Hưng Phúc" width="1024" height="750" loading="lazy" decoding="async"><img src="https://dailythuehungphuc.com/wp-content/uploads/2021/05/d%E1%BB%8Bch-v%E1%BB%A5-k%E1%BA%BF-to%C3%A1n-h%C6%B0ng-ph%C3%BAc-01-1-1024x750.jpg" alt="Nhân viên kế toán Hưng Phúc kiểm tra hóa đơn, chứng từ tại bàn làm việc" width="1024" height="750" loading="lazy" decoding="async"><img src="https://dailythuehungphuc.com/wp-content/uploads/2021/05/dich-vu-ke-toan-tron-goi-2.jpg" alt="Nhân viên tư vấn Hưng Phúc tiếp nhận cuộc gọi của khách hàng tại văn phòng" width="600" height="523" loading="lazy" decoding="async"><img src="https://dailythuehungphuc.com/wp-content/uploads/2021/05/dich-vu-ke-toan-tron-goi-1-1.jpg" alt="Nhân viên kế toán trao đổi và làm việc trên máy tính tại văn phòng Hưng Phúc" width="600" height="523" loading="lazy" decoding="async"></div>
+
+<h2 id="nhan-bao-gia">Cách nhận báo giá dịch vụ kế toán trọn gói</h2>
+<ol class="hp2-steps">
+<li><b>Liên hệ</b>Gọi hotline, nhắn Zalo hoặc để lại số điện thoại.</li>
+<li><b>Cho biết thông tin</b>Lĩnh vực và số hóa đơn dự kiến mỗi quý.</li>
+<li><b>Nhận báo giá</b>Hưng Phúc tư vấn và báo giá phù hợp.</li>
+</ol>
+<ul class="hp2-chips">
+<li>Công ty mới thành lập</li><li>Doanh nghiệp ít hóa đơn</li><li>Cần nộp thuế đúng hạn</li><li>Cần người làm việc với cơ quan thuế</li>
+</ul>
+<p class="hp2-note">Muốn tự nộp tờ khai? Dùng <a href="https://thuedientu.gdt.gov.vn/" target="_blank" rel="noopener">cổng thuế điện tử của cơ quan thuế</a>. Tránh <a href="https://dailythuehungphuc.com/muc-phat-cham-nop-to-khai-thue/">mức phạt chậm nộp tờ khai thuế</a> bằng cách nộp đúng hạn.</p>
+
+<h2 id="hoi-dap">Câu hỏi thường gặp về bảng giá dịch vụ kế toán trọn gói</h2>
+<div class="hp2-faq">
+<details open><summary>Bảng giá dịch vụ kế toán trọn gói tính theo tiêu chí nào?</summary><p>Theo tổng số hóa đơn phát sinh trong quý và lĩnh vực hoạt động của doanh nghiệp. Mức phí tính theo quý.</p></details><details><summary>Doanh nghiệp không phát sinh hóa đơn có mức phí bao nhiêu?</summary><p>900.000đ/quý ở cả hai nhóm lĩnh vực.</p></details><details><summary>Từ 186 hóa đơn mỗi quý thì tính phí thế nào?</summary><p>Phí thỏa thuận theo tình hình thực tế. Gọi hoặc nhắn Zalo để nhận báo giá dịch vụ kế toán trọn gói.</p></details><details><summary>Chi phí dịch vụ kế toán trọn gói có tăng không?</summary><p>Hưng Phúc luôn cố gắng giữ bảng giá ổn định. Mức phí thay đổi theo bậc số hóa đơn phát sinh mỗi quý.</p></details><details><summary>Hưng Phúc có đến công ty kiểm tra hóa đơn chứng từ không?</summary><p>Có. Nhân viên đến công ty bạn hàng tháng, hàng quý để kiểm tra hóa đơn chứng từ và tư vấn.</p></details><details><summary>Có kế toán riêng phụ trách sổ sách của công ty tôi không?</summary><p>Hưng Phúc cam kết chỉ một kế toán và một quản lý kế toán phụ trách sổ sách của công ty bạn.</p></details><details><summary>Làm sao nhận báo giá dịch vụ kế toán trọn gói nhanh nhất?</summary><p>Gọi 098.688.3137 hoặc nhắn Zalo, cho biết lĩnh vực hoạt động và số hóa đơn dự kiến mỗi quý.</p></details>
+</div>
+
+<section class="hp2-end" aria-label="Liên hệ nhận báo giá">
+<h2 id="tom-lai">Nhận báo giá dịch vụ kế toán trọn gói</h2>
+<p>Bảng giá dịch vụ kế toán trọn gói từ 900.000đ/quý. Liên hệ để nhận báo giá cho doanh nghiệp của bạn.</p>
+<div class="hp2-cta"><a class="hp2-btn hp2-call" href="tel:0986883137"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Gọi 098.688.3137</a><a class="hp2-btn hp2-zalo" href="https://zalo.me/0986883137" target="_blank" rel="noopener"><svg class="" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Nhắn Zalo</a></div>
+<address><strong>Công ty TNHH Tư vấn và Dịch vụ Kế toán Hưng Phúc</strong><br>Trụ sở: 32/70 Lê Thị Hồng, Phường 17, Quận Gò Vấp, TP.HCM<br>Chi nhánh Bình Thạnh: 174/21 Điện Biên Phủ, Phường 17, Quận Bình Thạnh, TP.HCM<br><a href="mailto:dailythuehungphuc@gmail.com">dailythuehungphuc@gmail.com</a></address>
+</section>
+</div>
+<script>(function(){var D={"tm":[[0,0,900000],[1,5,1000000],[6,12,1500000],[13,25,2000000],[26,38,2500000],[39,50,3000000],[51,63,3500000],[64,75,4000000],[76,87,4500000],[88,100,5000000],[101,125,5500000],[126,153,6000000],[154,185,6500000]],"sx":[[0,0,900000],[1,5,1200000],[6,12,1800000],[13,25,2400000],[26,38,3000000],[39,50,3600000],[51,63,4200000],[64,75,4800000],[76,87,5400000],[88,100,6000000],[101,125,6600000],[126,153,7200000],[154,185,7800000]]};var s=document.getElementById('hp2-sector'),n=document.getElementById('hp2-count'),o=document.getElementById('hp2-result');if(!s||!n||!o)return;
+function f(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'đ/quý';}
+function u(){var raw=n.value.trim();if(raw===''||!/^\d+$/.test(raw)){o.textContent='Nhập số hóa đơn';return;}
+var c=parseInt(raw,10);if(c>=186){o.textContent='Phí thỏa thuận';return;}
+var t=D[s.value];for(var i=0;i<t.length;i++){if(c>=t[i][0]&&c<=t[i][1]){o.textContent=f(t[i][2]);return;}}o.textContent='Nhập số hóa đơn';}
+s.addEventListener('change',u);n.addEventListener('input',u);u();})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Bảng giá dịch vụ kế toán trọn gói tính theo tiêu chí nào?", "acceptedAnswer": {"@type": "Answer", "text": "Theo tổng số hóa đơn phát sinh trong quý và lĩnh vực hoạt động của doanh nghiệp. Mức phí tính theo quý."}}, {"@type": "Question", "name": "Doanh nghiệp không phát sinh hóa đơn có mức phí bao nhiêu?", "acceptedAnswer": {"@type": "Answer", "text": "900.000đ/quý ở cả hai nhóm lĩnh vực."}}, {"@type": "Question", "name": "Từ 186 hóa đơn mỗi quý thì tính phí thế nào?", "acceptedAnswer": {"@type": "Answer", "text": "Phí thỏa thuận theo tình hình thực tế. Gọi hoặc nhắn Zalo để nhận báo giá dịch vụ kế toán trọn gói."}}, {"@type": "Question", "name": "Chi phí dịch vụ kế toán trọn gói có tăng không?", "acceptedAnswer": {"@type": "Answer", "text": "Hưng Phúc luôn cố gắng giữ bảng giá ổn định. Mức phí thay đổi theo bậc số hóa đơn phát sinh mỗi quý."}}, {"@type": "Question", "name": "Hưng Phúc có đến công ty kiểm tra hóa đơn chứng từ không?", "acceptedAnswer": {"@type": "Answer", "text": "Có. Nhân viên đến công ty bạn hàng tháng, hàng quý để kiểm tra hóa đơn chứng từ và tư vấn."}}, {"@type": "Question", "name": "Có kế toán riêng phụ trách sổ sách của công ty tôi không?", "acceptedAnswer": {"@type": "Answer", "text": "Hưng Phúc cam kết chỉ một kế toán và một quản lý kế toán phụ trách sổ sách của công ty bạn."}}, {"@type": "Question", "name": "Làm sao nhận báo giá dịch vụ kế toán trọn gói nhanh nhất?", "acceptedAnswer": {"@type": "Answer", "text": "Gọi 098.688.3137 hoặc nhắn Zalo, cho biết lĩnh vực hoạt động và số hóa đơn dự kiến mỗi quý."}}]}</script>
